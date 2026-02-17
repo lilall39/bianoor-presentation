@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef, useState } from 'react';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import { Card, CardGrid } from '@/components/CardGrid';
@@ -18,6 +21,39 @@ import {
   MapPin,
   Target
 } from 'lucide-react';
+
+function FadeInScroll({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => setIsVisible(true), delay);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [delay]);
+
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-500 ease-out ${
+        isVisible 
+          ? 'opacity-100 translate-y-0 scale-100' 
+          : 'opacity-0 translate-y-4 scale-[0.98] bg-[#EFE9E1]'
+      }`}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -81,24 +117,32 @@ export default function Home() {
         dark
       >
         <CardGrid columns={2} className="items-stretch justify-center">
-          <Card 
-            title="Croissance Halal"
-            description="• Le marché halal en Europe est estimé à ~93 milliards USD en 2025, avec un TCAC attendu ≈ 7,8 % (projection 2025→2030).\n• D’autres études donnent des estimations plus larges selon périmètre (ex. IMARC : valeur importante et forte croissance à l’horizon 2034).\n• En France, le rayon halal en grande distribution reste limité (~480 M€ GD), le marché total alimentaire halal (tous circuits) atteignant plusieurs milliards (≈ ~6 Md€ selon périmètre)."
-            icon={<TrendingUp className="w-8 h-8" />}
-            className="bg-[#FFFDFB] border-accent/10 !pt-4 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-4 [&_p]:whitespace-pre-line [&_p]:text-justify [&_div]:!mb-2"
-          />
-          <Card 
-            title="Hausse du Bio"
-            description="• Le marché bio européen pèse désormais autour de ~58–60 Md€ (ventes retail Europe récentes, record 2024).\n• En France, les ventes bio en grande distribution ont connu une dynamique marquée récemment (ex. variation notable en 2023 ; ventes GD et circuits alternatifs à surveiller — rapport Agence BIO).\n• La part de surface agricole bio en Europe continue d’augmenter (zone UE ≈ 10–10.5 % de la SAU selon les années récentes)"
-            icon={<Zap className="w-8 h-8" />}
-            className="bg-[#FFFDFB] border-accent/10 !pt-4 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-4 [&_p]:whitespace-pre-line [&_p]:text-justify [&_div]:!mb-2"
-          />
-          <Card 
-            title="Segment peu structuré"
-            description="Le marché halal en grande distribution en France reste fragmenté (~480 M € GD, ~6 Md € total).\n• Marques certifiées comme Zakia, Isla Délice, Wassila, Italal existent, mais rare combinaison bio + halal.\n• Très peu de marques européennes établies avec une offre bio + halal crédible (segment encore jeune)"
-            icon={<Flag className="w-8 h-8" />}
-            className="bg-[#FFFDFB] border-accent/10 !pt-4 flex flex-col items-start justify-start md:col-span-2 [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-4 [&_p]:whitespace-pre-line [&_p]:text-justify [&_div]:!mb-2"
-          />
+          <FadeInScroll delay={0}>
+            <Card 
+              title="Croissance Halal"
+              description="• Le marché halal en Europe est estimé à ~93 milliards USD en 2025, avec un TCAC attendu ≈ 7,8 % (projection 2025→2030).\n• D’autres études donnent des estimations plus larges selon périmètre (ex. IMARC : valeur importante et forte croissance à l’horizon 2034).\n• En France, le rayon halal en grande distribution reste limité (~480 M€ GD), le marché total alimentaire halal (tous circuits) atteignant plusieurs milliards (≈ ~6 Md€ selon périmètre)."
+              icon={<TrendingUp className="w-8 h-8" />}
+              className="bg-[#FFFDFB] border-accent/10 !pt-4 h-full flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-4 [&_p]:whitespace-pre-line [&_p]:text-justify [&_div]:!mb-2"
+            />
+          </FadeInScroll>
+          <FadeInScroll delay={100}>
+            <Card 
+              title="Hausse du Bio"
+              description="• Le marché bio européen pèse désormais autour de ~58–60 Md€ (ventes retail Europe récentes, record 2024).\n• En France, les ventes bio en grande distribution ont connu une dynamique marquée récemment (ex. variation notable en 2023 ; ventes GD et circuits alternatifs à surveiller — rapport Agence BIO).\n• La part de surface agricole bio en Europe continue d’augmenter (zone UE ≈ 10–10.5 % de la SAU selon les années récentes)"
+              icon={<Zap className="w-8 h-8" />}
+              className="bg-[#FFFDFB] border-accent/10 !pt-4 h-full flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-4 [&_p]:whitespace-pre-line [&_p]:text-justify [&_div]:!mb-2"
+            />
+          </FadeInScroll>
+          <div className="md:col-span-2">
+            <FadeInScroll delay={200}>
+              <Card 
+                title="Segment peu structuré"
+                description="Le marché halal en grande distribution en France reste fragmenté (~480 M € GD, ~6 Md € total).\n• Marques certifiées comme Zakia, Isla Délice, Wassila, Italal existent, mais rare combinaison bio + halal.\n• Très peu de marques européennes établies avec une offre bio + halal crédible (segment encore jeune)"
+                icon={<Flag className="w-8 h-8" />}
+                className="bg-[#FFFDFB] border-accent/10 !pt-4 h-full flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-4 [&_p]:whitespace-pre-line [&_p]:text-justify [&_div]:!mb-2"
+              />
+            </FadeInScroll>
+          </div>
         </CardGrid>
       </Section>
 
@@ -122,15 +166,17 @@ export default function Home() {
               <p className="text-gray-600">Consommation quotidienne, période du Ramadan, et coffrets cadeaux.</p>
             </div>
           </div>
-          <div className="shadow-xl rounded-2xl border border-black/5 overflow-hidden max-w-[80%] mx-auto lg:ml-auto lg:mr-0">
-            <div className="relative aspect-[4/3] bg-white/50 p-8">
-              <img 
-                src="/images/cibles-usages-v4.png" 
-                alt="Portraits cibles / Usages BIONOOR" 
-                className="w-full h-full object-contain"
-              />
+          <FadeInScroll delay={300}>
+            <div className="shadow-xl rounded-2xl border border-black/5 overflow-hidden max-w-[80%] mx-auto lg:ml-auto lg:mr-0">
+              <div className="relative aspect-[4/3] bg-white/50 p-8">
+                <img 
+                  src="/images/cibles-usages-v4.png" 
+                  alt="Portraits cibles / Usages BIONOOR" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
-          </div>
+          </FadeInScroll>
         </CardGrid>
       </Section>
 
@@ -140,10 +186,10 @@ export default function Home() {
         title="Bio certifié. Halal conforme par process."
       >
         <CardGrid columns={2} className="items-center">
-          <div className="space-y-6">
+          <div className="space-y-6 text-justify">
             <h3 className="text-2xl font-bold">Traçabilité totale</h3>
             <p className="text-gray-600">De l&apos;origine Algérie (zones identifiées) jusqu&apos;au consommateur final.</p>
-            <ul className="space-y-4">
+            <ul className="space-y-4 text-left">
               <li className="flex gap-4">
                 <CheckCircle className="text-accent shrink-0" />
                 <span>Produits sains et naturels</span>
