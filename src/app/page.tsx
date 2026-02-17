@@ -122,7 +122,7 @@ export default function Home() {
           </div>
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
             <img 
-              src="/images/cibles-usages-v2.png" 
+              src="/images/cibles-usages-v3.png" 
               alt="Portraits cibles / Usages BIONOOR" 
               className="w-full h-full object-cover"
             />
