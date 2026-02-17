@@ -155,12 +155,14 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl max-w-[80%] mx-auto">
-            <img 
-              src="/images/solution-bio-v2.png" 
-              alt="Schéma de la solution / Process BIONOOR" 
-              className="w-full h-full object-cover"
-            />
+          <div className="shadow-xl rounded-2xl border border-black/5 overflow-hidden max-w-[80%] mx-auto lg:ml-auto lg:mr-0">
+            <div className="relative aspect-[4/3] bg-white/50 p-8">
+              <img 
+                src="/images/logo-bio-certifications.png" 
+                alt="Schéma de la solution / Process BIONOOR" 
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
         </CardGrid>
       </Section>
