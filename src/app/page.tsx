@@ -139,6 +139,7 @@ export default function Home() {
       <Section 
         subtitle="Cibles"
         title="Qui sont les consommateurs BIONOOR ?"
+        className="!pt-16"
       >
         <CardGrid columns={2} className="items-center">
           <div className="space-y-6 text-justify">
