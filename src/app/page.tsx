@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <main>
       <div className="w-full py-4 flex items-center justify-center px-4 bg-[#EFE9E1] border-b border-accent/30 shadow-sm">
-        <span className="text-sm md:text-base font-bold tracking-wider text-[#2D1E14] uppercase text-center">
+        <span className="text-[10px] sm:text-xs md:text-base font-bold tracking-wider text-[#2D1E14] uppercase text-center leading-tight">
           BIONOOR — Présentation · Marché & opportunité d’investissement
         </span>
       </div>
@@ -76,7 +76,7 @@ export default function Home() {
       <Section 
         subtitle="Le Problème"
         title="Une demande forte, une offre peu lisible."
-        className="!pt-16"
+        className="pt-10 md:pt-16"
       >
         <TwoColumns>
           <div className="space-y-6 text-justify">
@@ -139,7 +139,7 @@ export default function Home() {
       <Section 
         subtitle="Cibles"
         title="Qui sont les consommateurs BIONOOR ?"
-        className="!pt-16"
+        className="pt-10 md:pt-16"
       >
         <CardGrid columns={2} className="items-center">
           <div className="space-y-6 text-justify">
@@ -157,8 +157,8 @@ export default function Home() {
             </div>
           </div>
           <FadeInScroll delay={300}>
-            <div className="shadow-xl rounded-2xl border border-black/5 overflow-hidden max-w-[80%] mx-auto lg:ml-auto lg:mr-0">
-              <div className="relative aspect-[4/3] bg-white/50 p-8">
+            <div className="shadow-xl rounded-2xl border border-black/5 overflow-hidden w-full max-w-[90%] md:max-w-[80%] mx-auto lg:ml-auto lg:mr-0">
+              <div className="relative aspect-[4/3] bg-white/50 p-6 md:p-8">
                 <img 
                   src="/images/cibles-usages-v4.png" 
                   alt="Portraits cibles / Usages BIONOOR" 
@@ -195,8 +195,8 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="shadow-xl rounded-2xl border border-black/5 overflow-hidden max-w-[80%] mx-auto lg:ml-auto lg:mr-0">
-            <div className="relative aspect-[4/3] bg-white/50 p-8">
+          <div className="shadow-xl rounded-2xl border border-black/5 overflow-hidden w-full max-w-[90%] md:max-w-[80%] mx-auto lg:ml-auto lg:mr-0">
+            <div className="relative aspect-[4/3] bg-white/50 p-6 md:p-8">
               <img 
                 src="/images/solution-bio-v2.png" 
                 alt="Schéma de la solution / Process BIONOOR" 
@@ -269,7 +269,7 @@ export default function Home() {
       <Section 
         subtitle="Actifs"
         title="Un socle déjà solide pour décoller."
-        className="!pt-16"
+        className="pt-10 md:pt-16"
       >
         <CardGrid columns={4}>
           <FadeInScroll delay={0}>
