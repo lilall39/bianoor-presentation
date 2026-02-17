@@ -43,7 +43,7 @@ export default function Home() {
         className="!pt-4"
       >
         <TwoColumns>
-          <div className="space-y-6">
+          <div className="space-y-6 text-justify">
             <p className="text-xl text-gray-600 leading-relaxed">
               Le marché bio + halal + traçabilité manque de marques fortes et lisibles.
             </p>
@@ -62,12 +62,14 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-            <img 
-              src="/images/probleme-marche-dattes.png" 
-              alt="Visualisation des freins du marché" 
-              className="w-full h-full object-cover"
-            />
+          <div className="shadow-xl rounded-2xl border border-black/5 overflow-hidden">
+            <div className="relative aspect-[4/3]">
+              <img 
+                src="/images/probleme-marche-dattes.png" 
+                alt="Visualisation des freins du marché" 
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </TwoColumns>
       </Section>
@@ -106,7 +108,7 @@ export default function Home() {
         title="Qui sont les consommateurs BIONOOR ?"
       >
         <CardGrid columns={2} className="items-center">
-          <div className="space-y-8">
+          <div className="space-y-8 text-justify">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">Cible principale</h3>
               <p className="text-gray-600">Familles musulmanes résidant en France et en Europe à la recherche de produits sains.</p>
@@ -120,12 +122,14 @@ export default function Home() {
               <p className="text-gray-600">Consommation quotidienne, période du Ramadan, et coffrets cadeaux.</p>
             </div>
           </div>
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl max-w-[80%] mx-auto lg:translate-y-12">
-            <img 
-              src="/images/cibles-usages-v4.png" 
-              alt="Portraits cibles / Usages BIONOOR" 
-              className="w-full h-full object-cover"
-            />
+          <div className="shadow-xl rounded-2xl border border-black/5 overflow-hidden max-w-[80%] mx-auto lg:ml-auto lg:mr-0 lg:translate-y-12">
+            <div className="relative aspect-[4/3] bg-white/50 p-8">
+              <img 
+                src="/images/cibles-usages-v4.png" 
+                alt="Portraits cibles / Usages BIONOOR" 
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
         </CardGrid>
       </Section>
@@ -173,14 +177,14 @@ export default function Home() {
         title="Les Dattes : Notre produit d'entrée"
       >
         <TwoColumns>
-          <div className="space-y-6">
+          <div className="space-y-6 text-justify">
             <div className="p-4 bg-[#F0E6DD] border-l-4 border-accent inline-block">
               <span className="font-bold text-accent">Notation qualité 18,2/20 (experts)</span>
             </div>
             <p className="text-gray-600 leading-relaxed">
               Produit B2B existant depuis 20 ans avec une identité algérienne forte. Le bio est rare sur ce segment, ce qui nous confère un avantage compétitif majeur.
             </p>
-            <CardGrid columns={1} className="!gap-4">
+            <CardGrid columns={1} className="!gap-4 text-left">
               <div className="flex items-center gap-4 p-4 bg-[#F0E6DD]/40 rounded-xl">
                 <ShoppingCart className="text-accent w-5 h-5" />
                 <span>Formats : boîtes famille, coffrets premium, cadeaux B2B.</span>
@@ -191,12 +195,14 @@ export default function Home() {
               </div>
             </CardGrid>
           </div>
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-            <img 
-              src="/images/probleme-marche-dattes.png" 
-              alt="Packshot Dattes BIONOOR" 
-              className="w-full h-full object-cover"
-            />
+          <div className="shadow-xl rounded-2xl border border-black/5 overflow-hidden">
+            <div className="relative aspect-[4/3]">
+              <img 
+                src="/images/probleme-marche-dattes.png" 
+                alt="Packshot Dattes BIONOOR" 
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </TwoColumns>
       </Section>
