@@ -244,57 +244,26 @@ export default function Home() {
       </Section>
 
       {/* 7. Avantage clé — humain & filières */}
-      <section 
-        className="relative py-20 sm:py-32 px-4 sm:px-6 md:px-12 lg:px-24 overflow-hidden"
+      <Section 
+        subtitle="Avantages"
+        title="Humain & Filières : Le cœur de BIONOOR"
+        dark
       >
-        {/* Background Image with Warm Overlay to blend */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/images/avantages-humain-filieres.png" 
-            alt="" 
-            className="w-full h-full object-cover"
-          />
-          {/* We use a solid color overlay that matches the image's primary tone to "hide" the image's baked-in text 
-              while keeping the overall texture and palm tree silhouettes visible */}
-          <div className="absolute inset-0 bg-[#D98E5F]/80 mix-blend-multiply"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-[#D98E5F]/20 to-[#D98E5F]/40"></div>
-        </div>
-
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="mb-16 sm:mb-24">
-            <p className="text-base font-bold uppercase tracking-[0.3em] mb-4 text-[#4A2E19] opacity-70">
-              AVANTAGES
+        <TwoColumns align="top">
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold">Hadj Khelil</h3>
+            <p className="text-orange-100 opacity-90">
+              Fondateur &amp; expert bio halal avec plus de 20 ans d&apos;expérience terrain. Sa connaissance des filières est notre plus grand atout.
             </p>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 leading-[1.1] text-[#1A0F08] font-serif max-w-4xl">
-              Humain & Filières : <br />
-              Le cœur de BIONOOR
-            </h2>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-0 relative">
-            {/* Colonne Gauche */}
-            <div className="space-y-6 md:pr-12">
-              <h3 className="text-2xl md:text-3xl font-bold text-[#1A0F08]">Hadj Khelil</h3>
-              <p className="text-lg md:text-xl text-[#1A0F08] leading-relaxed opacity-90 text-justify">
-                Fondateur & expert bio halal avec plus de 20 ans d&apos;expérience terrain. 
-                Sa connaissance des filières est notre plus grand atout.
-              </p>
-            </div>
-
-            {/* Séparateur Vertical (Desktop) */}
-            <div className="hidden md:block absolute left-1/2 top-4 bottom-4 w-px bg-[#1A0F08]/20"></div>
-
-            {/* Colonne Droite */}
-            <div className="space-y-6 md:pl-12">
-              <h3 className="text-2xl md:text-3xl font-bold text-[#1A0F08]">Filières identifiées</h3>
-              <p className="text-lg md:text-xl text-[#1A0F08] leading-relaxed opacity-90 text-justify">
-                Filières algériennes sourcées directement. 
-                Process documentés pour assurer la continuité et la qualité.
-              </p>
-            </div>
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold">Filières identifiées</h3>
+            <p className="text-orange-100 opacity-90">
+              Filières algériennes sourcées directement. Process documentés pour assurer la continuité et la qualité.
+            </p>
           </div>
-        </div>
-      </section>
+        </TwoColumns>
+      </Section>
 
       {/* 8. Actifs existants */}
       <Section 
