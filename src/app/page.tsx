@@ -22,8 +22,8 @@ import {
 export default function Home() {
   return (
     <main>
-      <div className="w-full h-8 flex items-center justify-center px-4 bg-background/50 border-b border-accent/5">
-        <span className="text-[10px] md:text-xs font-medium tracking-[0.2em] text-accent/60 uppercase text-center">
+      <div className="w-full h-10 flex items-center justify-center px-4 bg-[#EFE9E1] border-b border-accent/20">
+        <span className="text-sm md:text-base font-semibold tracking-wider text-[#4A3728] uppercase text-center">
           BIONOOR — Présentation stratégique · Marché & opportunité d’investissement
         </span>
       </div>
