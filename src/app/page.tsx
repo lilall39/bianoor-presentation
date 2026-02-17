@@ -108,7 +108,7 @@ export default function Home() {
         title="Qui sont les consommateurs BIONOOR ?"
       >
         <CardGrid columns={2} className="items-center">
-          <div className="space-y-8 text-justify">
+          <div className="space-y-6 text-justify">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">Cible principale</h3>
               <p className="text-gray-600">Familles musulmanes résidant en France et en Europe à la recherche de produits sains.</p>
@@ -122,7 +122,7 @@ export default function Home() {
               <p className="text-gray-600">Consommation quotidienne, période du Ramadan, et coffrets cadeaux.</p>
             </div>
           </div>
-          <div className="shadow-xl rounded-2xl border border-black/5 overflow-hidden max-w-[80%] mx-auto lg:ml-auto lg:mr-0 lg:translate-y-12">
+          <div className="shadow-xl rounded-2xl border border-black/5 overflow-hidden max-w-[80%] mx-auto lg:ml-auto lg:mr-0">
             <div className="relative aspect-[4/3] bg-white/50 p-8">
               <img 
                 src="/images/cibles-usages-v4.png" 
