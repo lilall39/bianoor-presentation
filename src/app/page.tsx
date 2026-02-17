@@ -105,7 +105,7 @@ export default function Home() {
         subtitle="Cibles"
         title="Qui sont les consommateurs BIONOOR ?"
       >
-        <TwoColumns reversed>
+        <CardGrid columns={2} className="items-center">
           <div className="space-y-8">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">Cible principale</h3>
@@ -120,14 +120,14 @@ export default function Home() {
               <p className="text-gray-600">Consommation quotidienne, période du Ramadan, et coffrets cadeaux.</p>
             </div>
           </div>
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-white/50 max-w-[80%] mx-auto">
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl max-w-[80%] mx-auto -translate-y-10">
             <img 
               src="/images/cibles-usages-v4.png" 
               alt="Portraits cibles / Usages BIONOOR" 
-              className="w-full h-full object-contain p-4"
+              className="w-full h-full object-cover"
             />
           </div>
-        </TwoColumns>
+        </CardGrid>
       </Section>
 
       {/* 5. Solution */}
