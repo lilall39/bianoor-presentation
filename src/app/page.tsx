@@ -22,6 +22,11 @@ import {
 export default function Home() {
   return (
     <main>
+      <div className="w-full h-8 flex items-center justify-center px-4 bg-background/50 border-b border-accent/5">
+        <span className="text-[10px] md:text-xs font-medium tracking-[0.2em] text-accent/60 uppercase">
+          BIONOOR — Présentation stratégique
+        </span>
+      </div>
       {/* 1. Hero */}
       <Hero 
         title="BIONOOR"
