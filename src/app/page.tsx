@@ -120,7 +120,7 @@ export default function Home() {
               <p className="text-gray-600">Consommation quotidienne, période du Ramadan, et coffrets cadeaux.</p>
             </div>
           </div>
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl max-w-[80%] mx-auto -translate-y-10">
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl max-w-[80%] mx-auto lg:translate-y-12">
             <img 
               src="/images/cibles-usages-v4.png" 
               alt="Portraits cibles / Usages BIONOOR" 
