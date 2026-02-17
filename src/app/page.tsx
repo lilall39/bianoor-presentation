@@ -129,7 +129,7 @@ export default function Home() {
         subtitle="Notre Solution"
         title="Bio certifié. Halal conforme par process."
       >
-        <CardGrid columns={2}>
+        <CardGrid columns={2} className="items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-bold">Traçabilité totale</h3>
             <p className="text-gray-600">De l&apos;origine Algérie (zones identifiées) jusqu&apos;au consommateur final.</p>
