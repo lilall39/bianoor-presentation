@@ -28,7 +28,7 @@ export default function Home() {
         subtitle="Bio halal premium depuis 20 ans"
         description="BIONOOR est une marque éthique ancrée depuis plus de 20 ans dans l’alimentation bio et halal, fondée autour des valeurs humaines de son dirigeant."
         ctaText="Lancer, mesurer, décider"
-        imageSrc="/images/hero-palm.png"
+        imageSrc="/images/hero-palm-v2.png"
       />
 
       {/* 2. Problème marché */}
