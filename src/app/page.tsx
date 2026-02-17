@@ -22,9 +22,9 @@ import {
 export default function Home() {
   return (
     <main>
-      <div className="w-full h-10 flex items-center justify-center px-4 bg-[#EFE9E1] border-b border-accent/20">
-        <span className="text-sm md:text-base font-semibold tracking-wider text-[#4A3728] uppercase text-center">
-          BIONOOR — Présentation stratégique · Marché & opportunité d’investissement
+      <div className="w-full py-4 flex items-center justify-center px-4 bg-[#EFE9E1] border-b border-accent/30 shadow-sm">
+        <span className="text-sm md:text-base font-bold tracking-wider text-[#2D1E14] uppercase text-center">
+          BIONOOR — Présentation · Marché & opportunité d’investissement
         </span>
       </div>
       {/* 1. Hero */}
