@@ -198,7 +198,7 @@ export default function Home() {
           <div className="shadow-xl rounded-2xl border border-black/5 overflow-hidden">
             <div className="relative aspect-[4/3]">
               <img 
-                src="/images/probleme-marche-dattes.png" 
+                src="/images/packshot-dattes-v2.png" 
                 alt="Packshot Dattes BIONOOR" 
                 className="w-full h-full object-cover"
               />
