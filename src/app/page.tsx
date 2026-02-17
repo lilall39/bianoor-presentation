@@ -59,7 +59,7 @@ export default function Home() {
           </div>
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
             <img 
-              src="/images/freins-marche.png" 
+              src="/images/probleme-marche-dattes.png" 
               alt="Visualisation des freins du marché" 
               className="w-full h-full object-cover"
             />
