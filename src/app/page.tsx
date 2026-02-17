@@ -268,6 +268,7 @@ export default function Home() {
       <Section 
         subtitle="Actifs"
         title="Un socle déjà solide pour décoller."
+        className="!pt-16"
       >
         <CardGrid columns={4}>
           <FadeInScroll delay={0}>
