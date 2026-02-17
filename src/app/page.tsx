@@ -44,7 +44,7 @@ function FadeInScroll({ children, delay = 0 }: { children: React.ReactNode, dela
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${
+      className={`h-full transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${
         isVisible 
           ? 'opacity-100 translate-y-0 scale-100' 
           : 'opacity-0 translate-y-8 scale-[0.95] blur-[2px]'
@@ -274,28 +274,28 @@ export default function Home() {
             <Card 
               title="10 000"
               description="Emails qualifiés en base."
-              className="bg-[#F0E6DD]/40 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
+              className="h-full bg-[#F0E6DD]/40 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
             />
           </FadeInScroll>
           <FadeInScroll delay={150}>
             <Card 
               title="25 000"
               description="Membres sur Facebook."
-              className="bg-[#F0E6DD]/40 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
+              className="h-full bg-[#F0E6DD]/40 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
             />
           </FadeInScroll>
           <FadeInScroll delay={300}>
             <Card 
               title="B2B"
               description="Référencements historiques collectivités."
-              className="bg-[#F0E6DD]/40 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
+              className="h-full bg-[#F0E6DD]/40 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
             />
           </FadeInScroll>
           <FadeInScroll delay={450}>
             <Card 
               title="Filières"
               description="Sourcing direct Algérie."
-              className="bg-[#F0E6DD]/40 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
+              className="h-full bg-[#F0E6DD]/40 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
             />
           </FadeInScroll>
         </CardGrid>
