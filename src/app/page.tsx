@@ -274,32 +274,28 @@ export default function Home() {
             <Card 
               title="10 000"
               description="Emails qualifiés en base."
-              icon={<Database className="w-6 h-6" />}
-              className="bg-[#F0E6DD]/40"
+              className="bg-[#F0E6DD]/40 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
             />
           </FadeInScroll>
           <FadeInScroll delay={150}>
             <Card 
               title="25 000"
               description="Membres sur Facebook."
-              icon={<Users className="w-6 h-6" />}
-              className="bg-[#F0E6DD]/40"
+              className="bg-[#F0E6DD]/40 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
             />
           </FadeInScroll>
           <FadeInScroll delay={300}>
             <Card 
               title="B2B"
               description="Référencements historiques collectivités."
-              icon={<Target className="w-6 h-6" />}
-              className="bg-[#F0E6DD]/40"
+              className="bg-[#F0E6DD]/40 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
             />
           </FadeInScroll>
           <FadeInScroll delay={450}>
             <Card 
               title="Filières"
               description="Sourcing direct Algérie."
-              icon={<MapPin className="w-6 h-6" />}
-              className="bg-[#F0E6DD]/40"
+              className="bg-[#F0E6DD]/40 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
             />
           </FadeInScroll>
         </CardGrid>
@@ -366,26 +362,31 @@ export default function Home() {
       >
         <h4 className="text-xl font-bold mb-8">Utilisation des fonds :</h4>
         <CardGrid columns={3}>
-          <div className="p-6 bg-[#F0E6DD]/30 rounded-xl border border-accent/10">
-            <h5 className="font-bold mb-2">Produits & sourcing</h5>
-            <p className="text-gray-400">[À compléter]</p>
-          </div>
-          <div className="p-6 bg-[#F0E6DD]/30 rounded-xl border border-accent/10">
-            <h5 className="font-bold mb-2">E-commerce & outils</h5>
-            <p className="text-gray-400">[À compléter]</p>
-          </div>
-          <div className="p-6 bg-[#F0E6DD]/30 rounded-xl border border-accent/10">
-            <h5 className="font-bold mb-2">Activation marketing</h5>
-            <p className="text-gray-400">[À compléter]</p>
-          </div>
-          <div className="p-6 bg-[#F0E6DD]/30 rounded-xl border border-accent/10">
-            <h5 className="font-bold mb-2">Logistique</h5>
-            <p className="text-gray-400">[À compléter]</p>
-          </div>
-          <div className="p-6 bg-[#F0E6DD]/30 rounded-xl border border-accent/10">
-            <h5 className="font-bold mb-2">Sécurité & imprévus</h5>
-            <p className="text-gray-400">[À compléter]</p>
-          </div>
+          <Card 
+            title="Produits & sourcing"
+            description="[À compléter]"
+            className="!pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:text-gray-400 [&_h3]:text-[21px] [&_h3]:!mt-0 [&_h3]:!mb-1"
+          />
+          <Card 
+            title="E-commerce & outils"
+            description="[À compléter]"
+            className="!pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:text-gray-400 [&_h3]:text-[21px] [&_h3]:!mt-0 [&_h3]:!mb-1"
+          />
+          <Card 
+            title="Activation marketing"
+            description="[À compléter]"
+            className="!pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:text-gray-400 [&_h3]:text-[21px] [&_h3]:!mt-0 [&_h3]:!mb-1"
+          />
+          <Card 
+            title="Logistique"
+            description="[À compléter]"
+            className="!pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:text-gray-400 [&_h3]:text-[21px] [&_h3]:!mt-0 [&_h3]:!mb-1"
+          />
+          <Card 
+            title="Sécurité & imprévus"
+            description="[À compléter]"
+            className="!pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:text-gray-400 [&_h3]:text-[21px] [&_h3]:!mt-0 [&_h3]:!mb-1"
+          />
         </CardGrid>
         <div className="mt-12 p-8 bg-accent text-white rounded-2xl">
           <h4 className="text-xl font-bold mb-4">Objectifs clés :</h4>
@@ -402,12 +403,12 @@ export default function Home() {
           <Card 
             title="Risques identifiés"
             description="Filières saisonnières, logistique, traction B2C, constance qualité."
-            icon={<AlertTriangle className="w-8 h-8" />}
+            className="!pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
           />
           <Card 
             title="Actions de mitigation"
             description="Diversification progressive, stocks stratégiques courts, tests marché, pilotage par data."
-            icon={<ShieldCheck className="w-8 h-8" />}
+            className="!pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
           />
         </CardGrid>
       </Section>
