@@ -155,7 +155,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl max-w-[90%] mx-auto">
             <img 
               src="/images/solution-bio-v2.png" 
               alt="Schéma de la solution / Process BIONOOR" 
