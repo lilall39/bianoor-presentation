@@ -9,10 +9,10 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({ title, description, icon, className = '' }) => {
   return (
-    <div className={`p-8 bg-[#F0E6DD]/30 rounded-2xl border border-accent/10 hover:border-accent/20 hover:shadow-xl hover:shadow-accent/5 transition-all duration-300 ${className}`}>
-      {icon && <div className="mb-6 text-accent">{icon}</div>}
-      <h3 className="text-xl font-bold mb-4">{title}</h3>
-      <p className="text-gray-600 leading-relaxed">{description}</p>
+    <div className={`pt-2 pb-4 px-5 bg-[#F0E6DD]/40 rounded-2xl border border-accent/10 hover:border-accent/20 hover:shadow-xl hover:shadow-accent/5 transition-all duration-300 flex flex-col items-start justify-start ${className}`}>
+      {icon && <div className="mb-1 text-accent">{icon}</div>}
+      <h3 className="text-[22px] font-bold mt-0 mb-1 text-accent leading-tight">{title}</h3>
+      <p className="text-[#1F1F1F] text-[17px] leading-relaxed text-justify whitespace-pre-line">{description}</p>
     </div>
   );
 };
