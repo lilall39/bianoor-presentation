@@ -19,8 +19,8 @@ export default function BudgetPage() {
         <CardGrid columns={2}>
           <div className="space-y-6">
             <h3 className="text-2xl font-bold">Investissements initiaux</h3>
-            <div className="overflow-hidden rounded-xl border border-accent/10">
-              <table className="w-full text-left">
+            <div className="overflow-x-auto rounded-xl border border-accent/10">
+              <table className="w-full text-left min-w-[400px]">
                 <thead className="bg-[#F0E6DD]/30 border-bottom border-accent/10">
                   <tr>
                     <th className="p-4 font-bold">Poste de dépense</th>
@@ -97,8 +97,8 @@ export default function BudgetPage() {
         </div>
       </Section>
 
-      <div className="px-6 md:px-12 lg:px-24">
-        <Link href="/" className="text-accent font-bold hover:underline">← Retour à la présentation</Link>
+      <div className="px-4 sm:px-6 md:px-12 lg:px-24">
+        <Link href="/" className="inline-block py-4 text-accent font-bold hover:underline">← Retour à la présentation</Link>
       </div>
     </main>
   );

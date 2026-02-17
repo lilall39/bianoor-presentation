@@ -75,21 +75,21 @@ export default function Home() {
         <CardGrid columns={3}>
           <Card 
             title="Croissance Halal"
-            description="Marché halal européen en forte croissance : ~93 Mds USD d'ici 2025. Croissance annuelle de ~7,8 % prévue jusqu'en 2030."
+            description="• Le marché halal en Europe est estimé à ~93 milliards USD en 2025, avec un TCAC attendu ≈ 7,8 % (projection 2025→2030).\n• D’autres études donnent des estimations plus larges selon périmètre (ex. IMARC : valeur importante et forte croissance à l’horizon 2034).\n• En France, le rayon halal en grande distribution reste limité (~480 M€ GD), le marché total alimentaire halal (tous circuits) atteignant plusieurs milliards (≈ ~6 Md€ selon périmètre)."
             icon={<TrendingUp className="w-8 h-8" />}
-            className="bg-accent-light border-accent-light/50 text-white !pt-4 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:text-[21px]"
+            className="bg-accent-light border-accent-light/50 text-white !pt-4 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:text-[21px] [&_p]:whitespace-pre-line"
           />
           <Card 
             title="Hausse du Bio"
-            description="Demande bio en hausse continue, portée par une recherche de santé et d&apos;éthique."
+            description="• Le marché bio européen pèse désormais autour de ~58–60 Md€ (ventes retail Europe récentes, record 2024).\n• En France, les ventes bio en grande distribution ont connu une dynamique marquée récemment (ex. variation notable en 2023 ; ventes GD et circuits alternatifs à surveiller — rapport Agence BIO).\n• La part de surface agricole bio en Europe continue d’augmenter (zone UE ≈ 10–10.5 % de la SAU selon les années récentes)"
             icon={<Zap className="w-8 h-8" />}
-            className="bg-accent-light border-accent-light/50 text-white !pt-4 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:text-[21px]"
+            className="bg-accent-light border-accent-light/50 text-white !pt-4 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:text-[21px] [&_p]:whitespace-pre-line"
           />
           <Card 
             title="Segment peu structuré"
-            description="Peu de marques crédibles sur le créneau spécifique bio + halal."
+            description="Le marché halal en grande distribution en France reste fragmenté (~480 M € GD, ~6 Md € total).\n• Marques certifiées comme Zakia, Isla Délice, Wassila, Italal existent, mais rare combinaison bio + halal.\n• Très peu de marques européennes établies avec une offre bio + halal crédible (segment encore jeune)"
             icon={<Flag className="w-8 h-8" />}
-            className="bg-accent-light border-accent-light/50 text-white !pt-4 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:text-[21px]"
+            className="bg-accent-light border-accent-light/50 text-white !pt-4 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:text-[21px] [&_p]:whitespace-pre-line"
           />
         </CardGrid>
       </Section>
@@ -114,7 +114,13 @@ export default function Home() {
               <p className="text-gray-600">Consommation quotidienne, période du Ramadan, et coffrets cadeaux.</p>
             </div>
           </div>
-          <ImagePlaceholder text="Portraits cibles / Usages" />
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+            <img 
+              src="/images/cibles-usages-v2.png" 
+              alt="Portraits cibles / Usages BIONOOR" 
+              className="w-full h-full object-cover"
+            />
+          </div>
         </TwoColumns>
       </Section>
 
@@ -143,7 +149,13 @@ export default function Home() {
             </ul>
           </div>
 
-          <ImagePlaceholder text="Schéma de la solution / Process" />
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+            <img 
+              src="/images/solution-process.png" 
+              alt="Schéma de la solution / Process BIONOOR" 
+              className="w-full h-full object-cover"
+            />
+          </div>
         </CardGrid>
       </Section>
 
@@ -171,7 +183,13 @@ export default function Home() {
               </div>
             </CardGrid>
           </div>
-          <ImagePlaceholder text="Packshot Dattes BIONOOR" />
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+            <img 
+              src="/images/packshot-dattes.png" 
+              alt="Packshot Dattes BIONOOR" 
+              className="w-full h-full object-cover"
+            />
+          </div>
         </TwoColumns>
       </Section>
 

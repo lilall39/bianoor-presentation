@@ -74,8 +74,8 @@ export default function RendementsPage() {
         </div>
       </Section>
 
-      <div className="px-6 md:px-12 lg:px-24">
-        <Link href="/" className="text-accent font-bold hover:underline">← Retour à la présentation</Link>
+      <div className="px-4 sm:px-6 md:px-12 lg:px-24">
+        <Link href="/" className="inline-block py-4 text-accent font-bold hover:underline">← Retour à la présentation</Link>
       </div>
     </main>
   );

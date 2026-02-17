@@ -12,7 +12,7 @@ module.exports = {
         foreground: "var(--foreground)",
         accent: {
           DEFAULT: "#9B6B4A", // New requested brown
-          light: "#B28566",
+          light: "#A67B5C",
           dark: "#7D563B",
         },
       },
