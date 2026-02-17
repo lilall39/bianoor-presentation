@@ -44,10 +44,10 @@ function FadeInScroll({ children, delay = 0 }: { children: React.ReactNode, dela
   return (
     <div
       ref={ref}
-      className={`transition-all duration-500 ease-out ${
+      className={`transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${
         isVisible 
           ? 'opacity-100 translate-y-0 scale-100' 
-          : 'opacity-0 translate-y-4 scale-[0.98] bg-[#EFE9E1]'
+          : 'opacity-0 translate-y-8 scale-[0.95] blur-[2px]'
       }`}
     >
       {children}
@@ -270,30 +270,38 @@ export default function Home() {
         title="Un socle déjà solide pour décoller."
       >
         <CardGrid columns={4}>
-          <Card 
-            title="10 000"
-            description="Emails qualifiés en base."
-            icon={<Database className="w-6 h-6" />}
-            className="bg-[#F0E6DD]/40"
-          />
-          <Card 
-            title="25 000"
-            description="Membres sur Facebook."
-            icon={<Users className="w-6 h-6" />}
-            className="bg-[#F0E6DD]/40"
-          />
-          <Card 
-            title="B2B"
-            description="Référencements historiques collectivités."
-            icon={<Target className="w-6 h-6" />}
-            className="bg-[#F0E6DD]/40"
-          />
-          <Card 
-            title="Filières"
-            description="Sourcing direct Algérie."
-            icon={<MapPin className="w-6 h-6" />}
-            className="bg-[#F0E6DD]/40"
-          />
+          <FadeInScroll delay={0}>
+            <Card 
+              title="10 000"
+              description="Emails qualifiés en base."
+              icon={<Database className="w-6 h-6" />}
+              className="bg-[#F0E6DD]/40"
+            />
+          </FadeInScroll>
+          <FadeInScroll delay={150}>
+            <Card 
+              title="25 000"
+              description="Membres sur Facebook."
+              icon={<Users className="w-6 h-6" />}
+              className="bg-[#F0E6DD]/40"
+            />
+          </FadeInScroll>
+          <FadeInScroll delay={300}>
+            <Card 
+              title="B2B"
+              description="Référencements historiques collectivités."
+              icon={<Target className="w-6 h-6" />}
+              className="bg-[#F0E6DD]/40"
+            />
+          </FadeInScroll>
+          <FadeInScroll delay={450}>
+            <Card 
+              title="Filières"
+              description="Sourcing direct Algérie."
+              icon={<MapPin className="w-6 h-6" />}
+              className="bg-[#F0E6DD]/40"
+            />
+          </FadeInScroll>
         </CardGrid>
       </Section>
 
