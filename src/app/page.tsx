@@ -76,7 +76,7 @@ export default function Home() {
       <Section 
         subtitle="Le Problème"
         title="Une demande forte, une offre peu lisible."
-        className="!pt-4"
+        className="!pt-16"
       >
         <TwoColumns>
           <div className="space-y-6 text-justify">
