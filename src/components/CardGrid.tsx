@@ -1,0 +1,39 @@
+import React from 'react';
+
+interface CardProps {
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+  className?: string;
+}
+
+export const Card: React.FC<CardProps> = ({ title, description, icon, className = '' }) => {
+  return (
+    <div className={`p-8 bg-[#F0E6DD]/30 rounded-2xl border border-accent/10 hover:border-accent/20 hover:shadow-xl hover:shadow-accent/5 transition-all duration-300 ${className}`}>
+      {icon && <div className="mb-6 text-accent">{icon}</div>}
+      <h3 className="text-xl font-bold mb-4">{title}</h3>
+      <p className="text-gray-600 leading-relaxed">{description}</p>
+    </div>
+  );
+};
+
+interface CardGridProps {
+  children: React.ReactNode;
+  columns?: 1 | 2 | 3 | 4;
+  className?: string;
+}
+
+export const CardGrid: React.FC<CardGridProps> = ({ children, columns = 3, className = '' }) => {
+  const gridCols = {
+    1: 'grid-cols-1',
+    2: 'grid-cols-1 md:grid-cols-2',
+    3: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
+    4: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4',
+  };
+
+  return (
+    <div className={`grid ${gridCols[columns]} gap-6 md:gap-8 ${className}`}>
+      {children}
+    </div>
+  );
+};
