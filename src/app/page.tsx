@@ -47,7 +47,7 @@ function FadeInScroll({ children, delay = 0 }: { children: React.ReactNode, dela
       className={`transition-all duration-500 ease-out ${
         isVisible 
           ? 'opacity-100 translate-y-0 scale-100' 
-          : 'opacity-0 translate-y-6 scale-[0.98] bg-[#EFE9E1]'
+          : 'opacity-0 translate-y-4 scale-[0.98] bg-[#EFE9E1]'
       }`}
     >
       {children}
@@ -279,38 +279,30 @@ export default function Home() {
         title="Un socle déjà solide pour décoller."
       >
         <CardGrid columns={4}>
-          <FadeInScroll delay={0}>
-            <Card 
-              title="10 000"
-              description="Emails qualifiés en base."
-              icon={<Database className="w-6 h-6" />}
-              className="bg-[#F0E6DD]/40"
-            />
-          </FadeInScroll>
-          <FadeInScroll delay={100}>
-            <Card 
-              title="25 000"
-              description="Membres sur Facebook."
-              icon={<Users className="w-6 h-6" />}
-              className="bg-[#F0E6DD]/40"
-            />
-          </FadeInScroll>
-          <FadeInScroll delay={200}>
-            <Card 
-              title="B2B"
-              description="Référencements historiques collectivités."
-              icon={<Target className="w-6 h-6" />}
-              className="bg-[#F0E6DD]/40"
-            />
-          </FadeInScroll>
-          <FadeInScroll delay={300}>
-            <Card 
-              title="Filières"
-              description="Sourcing direct Algérie."
-              icon={<MapPin className="w-6 h-6" />}
-              className="bg-[#F0E6DD]/40"
-            />
-          </FadeInScroll>
+          <Card 
+            title="10 000"
+            description="Emails qualifiés en base."
+            icon={<Database className="w-6 h-6" />}
+            className="bg-[#F0E6DD]/40"
+          />
+          <Card 
+            title="25 000"
+            description="Membres sur Facebook."
+            icon={<Users className="w-6 h-6" />}
+            className="bg-[#F0E6DD]/40"
+          />
+          <Card 
+            title="B2B"
+            description="Référencements historiques collectivités."
+            icon={<Target className="w-6 h-6" />}
+            className="bg-[#F0E6DD]/40"
+          />
+          <Card 
+            title="Filières"
+            description="Sourcing direct Algérie."
+            icon={<MapPin className="w-6 h-6" />}
+            className="bg-[#F0E6DD]/40"
+          />
         </CardGrid>
       </Section>
 
