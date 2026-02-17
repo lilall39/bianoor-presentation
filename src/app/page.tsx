@@ -28,7 +28,7 @@ export default function Home() {
         subtitle="Bio halal premium depuis 20 ans"
         description="BIONOOR est une marque éthique ancrée depuis plus de 20 ans dans l’alimentation bio et halal, fondée autour des valeurs humaines de son dirigeant."
         ctaText="Lancer, mesurer, décider"
-        imageSrc="/images/hero-bianoor.png"
+        imageSrc="/images/hero-palm.png"
       />
 
       {/* 2. Problème marché */}
@@ -72,7 +72,7 @@ export default function Home() {
         title="Marché halal et bio en croissance en Europe."
         dark
       >
-        <CardGrid columns={3}>
+        <CardGrid columns={3} className="items-start">
           <Card 
             title="Croissance Halal"
             description="• Le marché halal en Europe est estimé à ~93 milliards USD en 2025, avec un TCAC attendu ≈ 7,8 % (projection 2025→2030).\n• D’autres études donnent des estimations plus larges selon périmètre (ex. IMARC : valeur importante et forte croissance à l’horizon 2034).\n• En France, le rayon halal en grande distribution reste limité (~480 M€ GD), le marché total alimentaire halal (tous circuits) atteignant plusieurs milliards (≈ ~6 Md€ selon périmètre)."
