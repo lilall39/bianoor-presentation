@@ -173,31 +173,32 @@ export default function Home() {
       <Section 
         subtitle="Notre Solution"
         title="Bio certifié. Halal conforme par process."
+        dark
       >
         <CardGrid columns={2} className="items-center">
           <div className="space-y-6 text-justify">
             <h3 className="text-2xl font-bold">Traçabilité totale</h3>
-            <p className="text-gray-600">De l&apos;origine Algérie (zones identifiées) jusqu&apos;au consommateur final.</p>
+            <p className="text-orange-50 opacity-90">De l&apos;origine Algérie (zones identifiées) jusqu&apos;au consommateur final.</p>
             <ul className="space-y-4 text-left">
               <li className="flex gap-4">
-                <CheckCircle className="text-accent shrink-0" />
-                <span>Produits sains et naturels</span>
+                <CheckCircle className="text-orange-200 shrink-0" />
+                <span className="text-white">Produits sains et naturels</span>
               </li>
               <li className="flex gap-4">
-                <CheckCircle className="text-accent shrink-0" />
-                <span>Qualité constante et supérieure</span>
+                <CheckCircle className="text-orange-200 shrink-0" />
+                <span className="text-white">Qualité constante et supérieure</span>
               </li>
               <li className="flex gap-4">
-                <CheckCircle className="text-accent shrink-0" />
-                <span>Transparence absolue sur les process</span>
+                <CheckCircle className="text-orange-200 shrink-0" />
+                <span className="text-white">Transparence absolue sur les process</span>
               </li>
             </ul>
           </div>
 
-          <div className="shadow-xl rounded-2xl border border-black/5 overflow-hidden max-w-[80%] mx-auto lg:ml-auto lg:mr-0">
-            <div className="relative aspect-[4/3] bg-white/50 p-8">
+          <div className="shadow-xl rounded-2xl border border-white/10 overflow-hidden max-w-[80%] mx-auto lg:ml-auto lg:mr-0">
+            <div className="relative aspect-[4/3] bg-white/10 p-8">
               <img 
-                src="/images/logo-bio-certifications.png" 
+                src="/images/solution-bio-v2.png" 
                 alt="Schéma de la solution / Process BIONOOR" 
                 className="w-full h-full object-contain"
               />
