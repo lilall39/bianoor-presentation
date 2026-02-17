@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function RendementsPage() {
   return (
-    <main className="min-h-screen pb-24">
+    <main className="pb-24">
       <Section 
         subtitle="Performances"
         title="Rendements & Projections"

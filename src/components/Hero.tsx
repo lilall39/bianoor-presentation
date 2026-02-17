@@ -12,7 +12,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ title, subtitle, description, ctaText, onCtaClick, imageSrc }) => {
   return (
-    <header className="relative w-full flex items-start justify-center pt-6 pb-6 md:pb-8 px-4 sm:px-6 md:px-12 lg:px-24 bg-background">
+    <header className="relative w-full flex items-start justify-center pt-4 pb-4 md:pb-5 px-4 sm:px-6 md:px-12 lg:px-24 bg-background">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-20">
         <div className="flex-1 text-left space-y-6 md:space-y-8">
           <div>

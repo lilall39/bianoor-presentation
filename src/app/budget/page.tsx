@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function BudgetPage() {
   return (
-    <main className="min-h-screen pb-24">
+    <main className="pb-24">
       <Section 
         subtitle="Plan financier"
         title="Budget & Allocation des fonds"

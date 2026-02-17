@@ -21,7 +21,7 @@ import {
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main>
       {/* 1. Hero */}
       <Hero 
         title="BIONOOR"
@@ -35,6 +35,7 @@ export default function Home() {
       <Section 
         subtitle="Le Problème"
         title="Une demande forte, une offre peu lisible."
+        className="!pt-4"
       >
         <TwoColumns>
           <div className="space-y-6">
