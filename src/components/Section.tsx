@@ -20,7 +20,7 @@ const Section: React.FC<SectionProps> = ({ children, title, subtitle, className 
               </p>
             )}
             {title && (
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 max-w-3xl leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 leading-tight">
                 {title}
               </h2>
             )}

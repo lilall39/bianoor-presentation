@@ -73,24 +73,24 @@ export default function Home() {
         title="Marché halal et bio en croissance en Europe."
         dark
       >
-        <CardGrid columns={3} className="items-start">
+        <CardGrid columns={2} className="items-stretch justify-center">
           <Card 
             title="Croissance Halal"
             description="• Le marché halal en Europe est estimé à ~93 milliards USD en 2025, avec un TCAC attendu ≈ 7,8 % (projection 2025→2030).\n• D’autres études donnent des estimations plus larges selon périmètre (ex. IMARC : valeur importante et forte croissance à l’horizon 2034).\n• En France, le rayon halal en grande distribution reste limité (~480 M€ GD), le marché total alimentaire halal (tous circuits) atteignant plusieurs milliards (≈ ~6 Md€ selon périmètre)."
             icon={<TrendingUp className="w-8 h-8" />}
-            className="bg-accent-light border-accent-light/50 text-white !pt-4 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:text-[21px] [&_p]:whitespace-pre-line"
+            className="bg-[#FFFDFB] border-accent/10 !pt-4 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-4 [&_p]:whitespace-pre-line [&_p]:text-justify [&_div]:!mb-2"
           />
           <Card 
             title="Hausse du Bio"
             description="• Le marché bio européen pèse désormais autour de ~58–60 Md€ (ventes retail Europe récentes, record 2024).\n• En France, les ventes bio en grande distribution ont connu une dynamique marquée récemment (ex. variation notable en 2023 ; ventes GD et circuits alternatifs à surveiller — rapport Agence BIO).\n• La part de surface agricole bio en Europe continue d’augmenter (zone UE ≈ 10–10.5 % de la SAU selon les années récentes)"
             icon={<Zap className="w-8 h-8" />}
-            className="bg-accent-light border-accent-light/50 text-white !pt-4 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:text-[21px] [&_p]:whitespace-pre-line"
+            className="bg-[#FFFDFB] border-accent/10 !pt-4 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-4 [&_p]:whitespace-pre-line [&_p]:text-justify [&_div]:!mb-2"
           />
           <Card 
             title="Segment peu structuré"
             description="Le marché halal en grande distribution en France reste fragmenté (~480 M € GD, ~6 Md € total).\n• Marques certifiées comme Zakia, Isla Délice, Wassila, Italal existent, mais rare combinaison bio + halal.\n• Très peu de marques européennes établies avec une offre bio + halal crédible (segment encore jeune)"
             icon={<Flag className="w-8 h-8" />}
-            className="bg-accent-light border-accent-light/50 text-white !pt-4 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:text-[21px] [&_p]:whitespace-pre-line"
+            className="bg-[#FFFDFB] border-accent/10 !pt-4 flex flex-col items-start justify-start md:col-span-2 [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-4 [&_p]:whitespace-pre-line [&_p]:text-justify [&_div]:!mb-2"
           />
         </CardGrid>
       </Section>
