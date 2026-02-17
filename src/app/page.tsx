@@ -120,11 +120,11 @@ export default function Home() {
               <p className="text-gray-600">Consommation quotidienne, période du Ramadan, et coffrets cadeaux.</p>
             </div>
           </div>
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-white/50">
             <img 
               src="/images/cibles-usages-v3.png" 
               alt="Portraits cibles / Usages BIONOOR" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain p-4"
             />
           </div>
         </TwoColumns>
