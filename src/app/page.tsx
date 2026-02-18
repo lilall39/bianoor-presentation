@@ -459,7 +459,7 @@ export default function Home() {
       <Section 
         title={t('risks_title')}
         animated={true}
-        className="mt-12"
+        className="mt-10 md:mt-16 text-center"
       >
         <RisksCarousel />
       </Section>
@@ -468,24 +468,24 @@ export default function Home() {
       <Section 
         subtitle={t('phase1_subtitle')}
         title={t('phase1_title')}
-        className="mt-12"
+        className="mt-10 md:mt-16"
       >
         <TwoColumns>
           <div className="space-y-6 text-justify">
             <div className="p-4 bg-[#F0E6DD] border-l-4 border-accent inline-block">
-              <span className="font-bold text-accent">{t('phase1_quality')}</span>
+              <span className="font-bold text-accent text-sm md:text-base">{t('phase1_quality')}</span>
             </div>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-sm md:text-base text-gray-600 leading-relaxed">
               {t('phase1_desc')}
             </p>
             <CardGrid columns={1} className="!gap-4 text-left">
               <div className="flex items-center gap-4 p-4 bg-[#F0E6DD]/40 rounded-xl">
                 <ShoppingCart className="text-accent w-5 h-5" />
-                <span className="text-sm md:text-base">{t('phase1_formats')}</span>
+                <span className="text-xs sm:text-sm md:text-base">{t('phase1_formats')}</span>
               </div>
               <div className="flex items-center gap-4 p-4 bg-[#F0E6DD]/40 rounded-xl">
                 <Calendar className="text-accent w-5 h-5" />
-                <span className="text-sm md:text-base">{t('phase1_recurrence')}</span>
+                <span className="text-xs sm:text-sm md:text-base">{t('phase1_recurrence')}</span>
               </div>
             </CardGrid>
           </div>
@@ -503,7 +503,7 @@ export default function Home() {
 
       {/* 4. Cibles clients & usages */}
       <Section 
-        className="mt-12"
+        className="mt-10 md:mt-16"
         animated={true}
       >
         <CardGrid columns={2} className="items-start">
@@ -514,7 +514,7 @@ export default function Home() {
                   hidden: { opacity: 0, y: 30 },
                   visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
                 }}
-                className="text-base font-bold uppercase tracking-widest mb-3 md:mb-4 text-accent"
+                className="text-sm md:text-base font-bold uppercase tracking-widest mb-3 md:mb-4 text-accent"
               >
                 {t('targets_subtitle')}
               </motion.p>
@@ -537,7 +537,7 @@ export default function Home() {
                   hidden: { opacity: 0, y: 30 },
                   visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
                 }}
-                className="text-base font-bold uppercase tracking-widest mb-3 md:mb-4 text-accent"
+                className="text-sm md:text-base font-bold uppercase tracking-widest mb-3 md:mb-4 text-accent"
               >
                 {t('solution_subtitle')}
               </motion.p>
@@ -559,7 +559,7 @@ export default function Home() {
       {/* 7. Avantage clé — humain & filières */}
       <Section 
         dark
-        className="mt-12 min-h-[40vh] md:h-[58vh] flex items-center justify-center overflow-hidden p-4 sm:p-8 md:p-12"
+        className="mt-10 md:mt-16 min-h-[40vh] md:h-[58vh] flex items-center justify-center overflow-hidden p-4 sm:p-8 md:p-12"
       >
         <div className="w-full h-full flex items-center justify-center max-w-5xl mx-auto">
           <img 
@@ -574,7 +574,7 @@ export default function Home() {
       <Section 
         subtitle={t('assets_subtitle')}
         title={t('assets_title')}
-        className="pt-10 md:pt-16"
+        className="pt-10 md:pt-16 mt-10 md:mt-16"
         animated={true}
       >
         <CardGrid columns={4}>
@@ -622,12 +622,12 @@ export default function Home() {
       <Section 
         subtitle={t('bm_subtitle')}
         title={t('bm_title')}
-        className="mt-12"
+        className="mt-10 md:mt-16"
       >
         <TwoColumns>
           <div className="space-y-6 text-gray-600">
-            <p className="text-xl text-foreground font-semibold">{t('bm_d2c')}</p>
-            <p>{t('bm_d2c_desc')}</p>
+            <p className="text-lg md:text-xl text-foreground font-semibold">{t('bm_d2c')}</p>
+            <p className="text-sm md:text-base">{t('bm_d2c_desc')}</p>
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
                 <CheckCircle className="text-accent w-5 h-5" />

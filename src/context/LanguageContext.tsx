@@ -120,7 +120,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       team_title: "Une expertise solide.",
       team_direction: "Direction",
       team_hadj: "Hadj Khelil : Sourcing & qualité. Expert bio reconnu.",
-      team_resp: "Responsable BIO : Pilotage B2C en interne.",
+      team_resp: "Responsable BIONOOR : Pilotage B2C en interne.",
       team_ops: "Opérations",
       team_ops_desc: "Prestataires spécialisés au départ pour le site, le CRM, la logistique et le marketing pour une agilité maximale.",
       cta_title: "Ce projet n'est pas une promesse, c'est la réactivation structurée d'un actif réel.",
