@@ -327,7 +327,7 @@ export default function Home() {
               visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
             }}
             title="Croissance Halal"
-            description="• Le marché halal en Europe est estimé à ~93 milliards USD en 2025, avec un TCAC attendu ≈ 7,8 % (projection 2025→2030).\n• D’autres études donnent des estimations plus larges selon périmètre (ex. IMARC : valeur importante et forte croissance à l’horizon 2034).\n• En France, le rayon halal en grande distribution reste limité (~480 M€ GD), le marché total alimentaire halal (tous circuits) atteignant plusieurs milliards (≈ ~6 Md€ selon périmètre)."
+            description="La consommation de dattes en Europe progresse constamment, portée par l’intérêt pour les aliments naturels, bio et énergétiques. Les importations augmentent chaque année, reflétant une demande dynamique.\n\nEn France, plusieurs milliers de tonnes de dattes sont consommées annuellement, avec un marché retail estimé à plus de 100 millions d’euros pour les dattes conditionnées.\n\nLes données observées indiquent une dynamique positive de la demande, avec une croissance annuelle moyenne d’environ 4–5 %, particulièrement marquée autour de périodes culturelles comme le Ramadan."
             className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1"
           />
           <Card 
