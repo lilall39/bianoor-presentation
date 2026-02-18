@@ -1,19 +1,26 @@
+"use client";
+
 import React from 'react';
+import { motion, Variants } from 'framer-motion';
 
 interface CardProps {
   title: string;
   description: string;
   icon?: React.ReactNode;
   className?: string;
+  variants?: Variants;
 }
 
-export const Card: React.FC<CardProps> = ({ title, description, icon, className = '' }) => {
+export const Card: React.FC<CardProps> = ({ title, description, icon, className = '', variants }) => {
   return (
-    <div className={`p-8 bg-[#F0E6DD]/30 rounded-2xl border border-accent/10 hover:border-accent/20 hover:shadow-xl hover:shadow-accent/5 transition-all duration-300 ${className}`}>
+    <motion.div 
+      variants={variants}
+      className={`p-8 bg-[#F0E6DD]/30 rounded-2xl border border-accent/10 hover:border-accent/20 hover:shadow-xl hover:shadow-accent/5 transition-all duration-300 ${className}`}
+    >
       {icon && <div className="mb-6 text-accent">{icon}</div>}
       <h3 className="text-xl font-bold mb-4">{title}</h3>
       <p className="text-gray-600 leading-relaxed">{description}</p>
-    </div>
+    </motion.div>
   );
 };
 
