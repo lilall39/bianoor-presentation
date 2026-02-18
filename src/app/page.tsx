@@ -320,7 +320,7 @@ export default function Home() {
         dark
         animated={true}
       >
-        <CardGrid columns={2} className="items-start">
+        <CardGrid columns={2} className="items-stretch">
           <Card 
             variants={{
               hidden: { opacity: 0, y: 24 },
@@ -328,7 +328,7 @@ export default function Home() {
             }}
             title="Croissance du marché des dattes"
             description="La consommation de dattes en Europe progresse constamment, portée par l’intérêt pour les aliments naturels, bio et énergétiques. Les importations augmentent chaque année, reflétant une demande dynamique.\n\nEn France, plusieurs milliers de tonnes de dattes sont consommées annuellement, avec un marché retail estimé à plus de 100 millions d’euros pour les dattes conditionnées.\n\nLes données observées indiquent une dynamique positive de la demande, avec une croissance annuelle moyenne d’environ 4–5 %, particulièrement marquée autour de périodes culturelles comme le Ramadan."
-            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1"
+            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1 h-full"
           />
           <Card 
             variants={{
@@ -337,7 +337,7 @@ export default function Home() {
             }}
             title="Hausse du marché des dattes Bio"
             description="La demande de dattes bio croît en Europe, portée par l’intérêt croissant des consommateurs pour les aliments naturels, sains et certifiés. Les importations de dattes biologiques vers l’UE augmentent.\n\nEn France, une part croissante des dattes consommées est issue de l’agriculture biologique. Le segment bio représente une part significative du marché retail des dattes conditionnées (estimé à plus de 100 millions d’euros), avec une progression régulière observée au cours des dernières années.\n\nLes données de marché indiquent une dynamique soutenue pour les dattes bio, avec une croissance annuelle moyenne observée autour de 4–6 %."
-            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1"
+            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1 h-full"
           />
         </CardGrid>
       </Section>
