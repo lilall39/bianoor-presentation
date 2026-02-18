@@ -122,7 +122,7 @@ function SolutionCarousel() {
       text: "De l’origine Algérie (zones identifiées) jusqu’au consommateur final."
     },
     {
-      title: "Halal conforme par process",
+      title: "Procédures respectées et validées",
       text: "Procédures respectées à chaque étape de la chaîne de production."
     },
     {
