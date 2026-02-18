@@ -523,6 +523,7 @@ export default function Home() {
       <Section 
         subtitle="Business Model"
         title="Marge brute cible ~50 % (retail)."
+        className="mt-12"
       >
         <TwoColumns>
           <div className="space-y-6 text-gray-600">
