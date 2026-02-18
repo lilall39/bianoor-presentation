@@ -5,7 +5,7 @@ import { motion, Variants } from 'framer-motion';
 
 interface CardProps {
   title: string;
-  description: string;
+  description: React.ReactNode;
   icon?: React.ReactNode;
   className?: string;
   variants?: Variants;
