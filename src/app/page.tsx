@@ -466,7 +466,7 @@ export default function Home() {
       <Section 
         title="Risques identifiés & défis du marché des dattes (BIONOOR)"
         animated={true}
-        className="pt-10 md:pt-16"
+        className="mt-12"
       >
         <RisksCarousel />
       </Section>
