@@ -63,9 +63,15 @@ function TargetCarousel() {
         }}
       >
         <motion.div 
-          className="flex w-full h-full"
+          className="flex w-full h-full cursor-grab active:cursor-grabbing"
           animate={{ x: `-${current * 100}%` }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          onDragEnd={(_, info) => {
+            if (info.offset.x < -50) next();
+            if (info.offset.x > 50) prev();
+          }}
         >
           {slides.map((slide, i) => (
             <div key={i} className="w-full flex-shrink-0 p-6 md:p-8 flex flex-col items-center justify-center text-center space-y-4">
@@ -146,9 +152,15 @@ function SolutionCarousel() {
         }}
       >
         <motion.div 
-          className="flex w-full h-full"
+          className="flex w-full h-full cursor-grab active:cursor-grabbing"
           animate={{ x: `-${current * 100}%` }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          onDragEnd={(_, info) => {
+            if (info.offset.x < -50) next();
+            if (info.offset.x > 50) prev();
+          }}
         >
           {slides.map((slide, i) => (
             <div 
