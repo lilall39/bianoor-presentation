@@ -373,7 +373,7 @@ export default function Home() {
       >
         <CardGrid columns={2} className="items-end">
           <div className="space-y-6">
-            <div className="overflow-hidden">
+            <div>
               <motion.p 
                 variants={{
                   hidden: { opacity: 0, y: 30 },
@@ -388,7 +388,7 @@ export default function Home() {
                   hidden: { opacity: 0, y: 30 },
                   visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
                 }}
-                className="text-[12px] min-[380px]:text-[13px] min-[430px]:text-[14px] sm:text-2xl md:text-3xl lg:text-4xl mb-4 sm:mb-6 leading-tight font-serif font-medium tracking-tighter whitespace-nowrap"
+                className="text-[10px] min-[320px]:text-[11px] min-[375px]:text-[12px] min-[425px]:text-[14px] sm:text-2xl md:text-3xl lg:text-4xl mb-4 sm:mb-6 leading-tight font-serif font-medium tracking-tighter whitespace-nowrap"
               >
                 Qui sont les consommateurs BIONOOR ?
               </motion.h2>
@@ -396,7 +396,7 @@ export default function Home() {
             <TargetCarousel />
           </div>
           <div className="space-y-6">
-            <div className="overflow-hidden">
+            <div>
               <motion.p 
                 variants={{
                   hidden: { opacity: 0, y: 30 },
@@ -411,7 +411,7 @@ export default function Home() {
                   hidden: { opacity: 0, y: 30 },
                   visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
                 }}
-                className="text-[12px] min-[380px]:text-[13px] min-[430px]:text-[14px] sm:text-2xl md:text-3xl lg:text-4xl mb-4 sm:mb-6 leading-tight font-serif font-medium tracking-tighter whitespace-nowrap"
+                className="text-[10px] min-[320px]:text-[11px] min-[375px]:text-[12px] min-[425px]:text-[14px] sm:text-2xl md:text-3xl lg:text-4xl mb-4 sm:mb-6 leading-tight font-serif font-medium tracking-tighter whitespace-nowrap"
               >
                 Bio certifié. Halal conforme par process.
               </motion.h2>
