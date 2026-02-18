@@ -2,7 +2,6 @@
 
 import Section from '@/components/Section';
 import { Card, CardGrid } from '@/components/CardGrid';
-import TwoColumns from '@/components/TwoColumns';
 import ImagePlaceholder from '@/components/ImagePlaceholder';
 import { useLanguage } from '@/context/LanguageContext';
 import LanguageSwitcher from '@/components/LanguageSwitcher';

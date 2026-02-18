@@ -19,12 +19,16 @@ export const Card: React.FC<CardProps> = ({ title, description, icon, className 
     >
       {icon && <div className="mb-4 sm:mb-6 text-accent">{icon}</div>}
       <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">{title}</h3>
-      <div 
-        className="text-sm sm:text-base text-[#1A1A1A] leading-relaxed"
-        dangerouslySetInnerHTML={{ __html: typeof description === 'string' ? description : '' }}
-      >
-        {typeof description !== 'string' && description}
-      </div>
+      {typeof description === 'string' ? (
+        <div 
+          className="text-sm sm:text-base text-[#1A1A1A] leading-relaxed"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
+      ) : (
+        <div className="text-sm sm:text-base text-[#1A1A1A] leading-relaxed">
+          {description}
+        </div>
+      )}
     </motion.div>
   );
 };

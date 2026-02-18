@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { motion, Variants } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
@@ -11,19 +11,11 @@ import TwoColumns from '@/components/TwoColumns';
 import ImagePlaceholder from '@/components/ImagePlaceholder';
 import CTA from '@/components/CTA';
 import { 
-  AlertTriangle, 
-  TrendingUp, 
-  Users, 
-  CheckCircle, 
-  Calendar, 
-  Database, 
-  ShieldCheck, 
-  Zap, 
-  Flag,
+  TriangleAlert,
   ShoppingCart,
-  MapPin,
-  Target,
-  ChevronLeft,
+  Calendar,
+  CheckCircle,
+  ChevronLeft, 
   ChevronRight
 } from 'lucide-react';
 
@@ -366,7 +358,7 @@ export default function Home() {
                 }}
                 className="flex gap-4"
               >
-                <AlertTriangle className="text-accent shrink-0" />
+                <TriangleAlert className="text-accent shrink-0" />
                 <span className="text-sm md:text-base"><strong>{t('problem_item1_title')}</strong> {t('problem_item1_desc')}</span>
               </motion.li>
               <motion.li 
@@ -376,7 +368,7 @@ export default function Home() {
                 }}
                 className="flex gap-4"
               >
-                <AlertTriangle className="text-accent shrink-0" />
+                <TriangleAlert className="text-accent shrink-0" />
                 <span className="text-sm md:text-base"><strong>{t('problem_item2_title')}</strong> {t('problem_item2_desc')}</span>
               </motion.li>
               <motion.li 
@@ -386,7 +378,7 @@ export default function Home() {
                 }}
                 className="flex gap-4"
               >
-                <AlertTriangle className="text-accent shrink-0" />
+                <TriangleAlert className="text-accent shrink-0" />
                 <span className="text-sm md:text-base"><strong>{t('problem_item3_title')}</strong> {t('problem_item3_desc')}</span>
               </motion.li>
             </ul>

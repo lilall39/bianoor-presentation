@@ -7,7 +7,7 @@ type Language = 'fr' | 'en';
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => any;
+  t: (key: string) => string;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -15,7 +15,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<Language>('fr');
 
-  const translations: any = {
+  const translations: Record<Language, Record<string, string>> = {
     fr: {
       nav_title: "BIONOOR — Présentation · Marché & opportunité d’investissement",
       hero_title: "BIONOOR",
@@ -344,8 +344,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const t = (key: string) => {
-    return translations[language][key] || key;
+  const t = (key: string): string => {
+    return (translations[language] as Record<string, string>)[key] || key;
   };
 
   return (
