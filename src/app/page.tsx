@@ -546,7 +546,7 @@ export default function Home() {
                   hidden: { opacity: 0, y: 30 },
                   visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
                 }}
-                className="text-[10px] min-[320px]:text-[11px] min-[375px]:text-[12px] min-[425px]:text-[14px] sm:text-2xl md:text-3xl lg:text-4xl mb-4 sm:mb-6 leading-tight font-serif font-medium tracking-tighter whitespace-nowrap"
+                className="text-[9px] min-[320px]:text-[10px] min-[375px]:text-[11px] min-[425px]:text-[13px] sm:text-2xl md:text-3xl lg:text-4xl mb-4 sm:mb-6 leading-tight font-serif font-medium tracking-[-0.07em] whitespace-nowrap"
               >
                 {t('solution_title')}
               </motion.h2>
