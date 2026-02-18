@@ -336,7 +336,7 @@ export default function Home() {
                 Les données observées indiquent une <strong>dynamique positive</strong> de la demande, avec une <strong>croissance annuelle</strong> moyenne d’environ 4–5 %, particulièrement marquée autour de périodes culturelles comme le Ramadan.
               </>
             }
-            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[19px] [&_h3]:tracking-tighter [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1 h-full"
+            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-[#2D1E14] [&_h3]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tight [&_h3]:!mt-0 [&_h3]:!mb-2 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1 h-full shadow-sm"
           />
           <Card 
             variants={{
@@ -349,7 +349,7 @@ export default function Home() {
                 <strong>La demande de dattes bio croît</strong> en Europe, portée par l’<strong>intérêt croissant</strong> des consommateurs pour les aliments naturels, sains et certifiés. <strong>Les importations</strong> de dattes biologiques <strong>vers l’UE augmentent</strong>. En France, une part croissante des dattes consommées est <strong>issue de l’agriculture biologique</strong>. <strong>Le segment bio</strong> représente une part significative du marché retail des dattes conditionnées <strong>(estimé à plus de 100 millions d’euros)</strong>, avec une progression régulière observée au cours des dernières années. Les données de marché indiquent <strong>une dynamique soutenue</strong> pour les dattes bio, avec une <strong>croissance annuelle</strong> moyenne observée autour de 4–6 %.
               </>
             }
-            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[19px] [&_h3]:tracking-tighter [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1 h-full"
+            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-[#2D1E14] [&_h3]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tight [&_h3]:!mt-0 [&_h3]:!mb-2 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1 h-full shadow-sm"
           />
         </CardGrid>
       </Section>
