@@ -30,7 +30,7 @@ const Section: React.FC<SectionProps> = ({
       whileInView={animated ? "visible" : undefined}
       viewport={animated ? { once: false, amount: viewportAmount, margin: viewportMargin } : undefined}
       variants={animated ? {
-        visible: { transition: { staggerChildren: 0.16 } },
+        visible: { transition: { staggerChildren: 0.2 } },
         hidden: {}
       } : undefined}
       className={`py-6 sm:py-8 px-4 sm:px-6 md:px-12 lg:px-24 ${dark ? 'bg-accent text-white' : 'bg-background text-foreground'} ${className}`}
