@@ -424,7 +424,7 @@ export default function Home() {
             }}
             title={t('opp_card1_title')}
             description={t('opp_card1_desc')}
-            className="bg-[#F0E6DD]/40 !border-2 !border-[#2D1E14]/30 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-[#2D1E14] [&_h3]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tight [&_h3]:!mt-0 [&_h3]:!mb-2 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1 h-full shadow-sm"
+            className="bg-[#F0E6DD]/40 !border-2 !border-[#2D1E14]/30 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-[#1F1F1F] [&_div]:text-[17px] [&_h3]:!text-[#2D1E14] [&_h3]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tight [&_h3]:!mt-0 [&_h3]:!mb-2 [&_div]:whitespace-pre-line [&_div]:text-justify md:col-span-1 h-full shadow-sm"
           />
           <Card 
             variants={{
@@ -433,7 +433,7 @@ export default function Home() {
             }}
             title={t('opp_card2_title')}
             description={t('opp_card2_desc')}
-            className="bg-[#F0E6DD]/40 !border-2 !border-[#2D1E14]/30 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-[#2D1E14] [&_h3]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tight [&_h3]:!mt-0 [&_h3]:!mb-2 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1 h-full shadow-sm"
+            className="bg-[#F0E6DD]/40 !border-2 !border-[#2D1E14]/30 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-[#1F1F1F] [&_div]:text-[17px] [&_h3]:!text-[#2D1E14] [&_h3]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tight [&_h3]:!mt-0 [&_h3]:!mb-2 [&_div]:whitespace-pre-line [&_div]:text-justify md:col-span-1 h-full shadow-sm"
           />
         </CardGrid>
       </Section>
@@ -585,7 +585,7 @@ export default function Home() {
             }}
             title={t('asset1_title')}
             description={t('asset1_desc')}
-            className="h-full bg-[#F0E6DD]/40 !border-4 !border-accent !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify shadow-sm"
+            className="h-full bg-[#F0E6DD]/40 !border-4 !border-accent !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-[#1F1F1F] [&_div]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_div]:text-justify shadow-sm"
           />
           <Card 
             variants={{
@@ -594,7 +594,7 @@ export default function Home() {
             }}
             title={t('asset2_title')}
             description={t('asset2_desc')}
-            className="h-full bg-[#F0E6DD]/40 !border-4 !border-accent !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify shadow-sm"
+            className="h-full bg-[#F0E6DD]/40 !border-4 !border-accent !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-[#1F1F1F] [&_div]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_div]:text-justify shadow-sm"
           />
           <Card 
             variants={{
@@ -603,7 +603,7 @@ export default function Home() {
             }}
             title={t('asset3_title')}
             description={t('asset3_desc')}
-            className="h-full bg-[#F0E6DD]/40 !border-4 !border-accent !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify shadow-sm"
+            className="h-full bg-[#F0E6DD]/40 !border-4 !border-accent !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-[#1F1F1F] [&_div]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_div]:text-justify shadow-sm"
           />
           <Card 
             variants={{
@@ -612,7 +612,7 @@ export default function Home() {
             }}
             title={t('asset4_title')}
             description={t('asset4_desc')}
-            className="h-full bg-[#F0E6DD]/40 !border-4 !border-accent !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify shadow-sm"
+            className="h-full bg-[#F0E6DD]/40 !border-4 !border-accent !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-[#1F1F1F] [&_div]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_div]:text-justify shadow-sm"
           />
         </CardGrid>
       </Section>
@@ -682,27 +682,27 @@ export default function Home() {
           <Card 
             title={t('fin_item1_title')}
             description="[À compléter]"
-            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
+            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-[#1F1F1F] [&_div]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_div]:text-justify"
           />
           <Card 
             title={t('fin_item2_title')}
             description="[À compléter]"
-            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
+            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-[#1F1F1F] [&_div]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_div]:text-justify"
           />
           <Card 
             title={t('fin_item3_title')}
             description="[À compléter]"
-            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
+            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-[#1F1F1F] [&_div]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_div]:text-justify"
           />
           <Card 
             title={t('fin_item4_title')}
             description="[À compléter]"
-            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
+            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-[#1F1F1F] [&_div]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_div]:text-justify"
           />
           <Card 
             title={t('fin_item5_title')}
             description="[À compléter]"
-            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
+            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-[#1F1F1F] [&_div]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_div]:text-justify"
           />
         </CardGrid>
         <div className="mt-12 p-6 md:p-8 bg-accent text-white rounded-2xl">
@@ -720,12 +720,12 @@ export default function Home() {
           <Card 
             title={t('rm_item1_title')}
             description={t('rm_item1_desc')}
-            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
+            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-[#1F1F1F] [&_div]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_div]:text-justify"
           />
           <Card 
             title={t('rm_item2_title')}
             description={t('rm_item2_desc')}
-            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
+            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-[#1F1F1F] [&_div]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_div]:text-justify"
           />
         </CardGrid>
       </Section>
