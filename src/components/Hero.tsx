@@ -1,54 +1,112 @@
-import React from 'react';
-import ImagePlaceholder from './ImagePlaceholder';
+"use client";
+
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 interface HeroProps {
   title: string;
   subtitle: string;
-  description: string;
+  description?: string;
   ctaText?: string;
   onCtaClick?: () => void;
   imageSrc?: string;
 }
 
-const Hero: React.FC<HeroProps> = ({ title, subtitle, description, ctaText, onCtaClick, imageSrc }) => {
+const Hero: React.FC<HeroProps> = ({ title, subtitle, imageSrc }) => {
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { amount: 0.3, margin: "0px" });
+
+  const titleVariants = {
+    hidden: { 
+      opacity: 0, 
+      scale: 0.95, 
+      y: 20,
+      filter: "blur(10px)"
+    },
+    visible: { 
+      opacity: 1, 
+      scale: 1, 
+      y: 0,
+      filter: "blur(0px)",
+      transition: { 
+        duration: 1.8, 
+        ease: "easeOut",
+        delay: 0.3
+      }
+    }
+  };
+
+  const subtitleVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 10 
+    },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 1.2, 
+        ease: "easeOut", 
+        delay: 1.0 // Apparaît après le titre avec un délai plus long
+      }
+    }
+  };
+
   return (
-    <header className="relative w-full flex items-start justify-center pt-4 pb-4 md:pb-5 px-4 sm:px-6 md:px-12 lg:px-24 bg-background">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-20">
-        <div className="flex-1 text-left space-y-6 md:space-y-8">
-          <div>
-            <h1 className="text-base font-bold tracking-widest text-accent uppercase mb-3 md:mb-4">
-              {title}
-            </h1>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-4 md:mb-6">
-              {subtitle}
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl leading-relaxed">
-              {description}
-            </p>
-          </div>
-          {ctaText && (
-            <button 
-              onClick={onCtaClick}
-              className="w-full sm:w-auto px-8 py-4 bg-accent text-white font-semibold rounded-full hover:bg-accent-light transition-colors duration-300 shadow-lg shadow-stone-900/10"
-            >
-              {ctaText}
-            </button>
-          )}
-        </div>
-        <div className="flex-1 w-full max-w-xl mt-4 md:mt-0">
-          {imageSrc ? (
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src={imageSrc} 
-                alt={subtitle} 
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ) : (
-            <ImagePlaceholder className="aspect-[4/3] rounded-2xl shadow-2xl" text="Hero Image / Product Shot" />
-          )}
-        </div>
+    <header 
+      ref={containerRef}
+      className="relative w-full h-[58vh] flex flex-col items-center justify-start pt-[10vh] px-4 overflow-hidden"
+    >
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={imageSrc || "/images/hero-palm-v2.png"} 
+          alt="Bionoor Hero" 
+          className="w-full h-full object-cover scale-105"
+        />
+        {/* Subtle dark overlay (~20-25% black) */}
+        <div className="absolute inset-0 bg-black/25" />
+        {/* Very light vignette for text contrast */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_40%,rgba(0,0,0,0.2)_100%)]" />
       </div>
+
+      {/* Content */}
+      <div className="relative z-10 text-center space-y-4 max-w-5xl">
+        <motion.h1
+          variants={titleVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-black tracking-tight text-white uppercase px-2"
+          style={{ 
+            textShadow: '0 10px 40px rgba(0,0,0,0.4)',
+            lineHeight: 0.9
+          }}
+        >
+          {title}
+        </motion.h1>
+
+        <motion.p
+          variants={subtitleVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="text-lg sm:text-xl md:text-3xl font-medium text-white/95 tracking-[0.2em] uppercase"
+          style={{ 
+            textShadow: '0 4px 10px rgba(0,0,0,0.3)'
+          }}
+        >
+          {subtitle}
+        </motion.p>
+      </div>
+      
+      {/* Scroll indicator (optional but premium) */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
+      >
+        <div className="w-[1px] h-12 bg-gradient-to-b from-white/0 via-white/50 to-white/0" />
+      </motion.div>
     </header>
   );
 };
