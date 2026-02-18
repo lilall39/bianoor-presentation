@@ -260,7 +260,7 @@ export default function Home() {
               }}
               className="text-xl text-gray-600 leading-relaxed"
             >
-              Le marché bio + halal + traçabilité manque de marques fortes et lisibles.
+              Le marché bio + traçabilité manque de marques fortes et lisibles.
             </motion.p>
             <ul className="space-y-4">
               <motion.li 
