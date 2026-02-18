@@ -115,7 +115,7 @@ function SolutionCarousel() {
   const slides = [
     {
       title: "Notre Solution",
-      text: "Bio certifié. Halal conforme par process."
+      text: "Bio certifié et conforme par process validé"
     },
     {
       title: "Bio certifié",
@@ -413,7 +413,7 @@ export default function Home() {
                 }}
                 className="text-[10px] min-[320px]:text-[11px] min-[375px]:text-[12px] min-[425px]:text-[14px] sm:text-2xl md:text-3xl lg:text-4xl mb-4 sm:mb-6 leading-tight font-serif font-medium tracking-tighter whitespace-nowrap"
               >
-                Bio certifié. Halal conforme par process.
+                Bio certifié et conforme par process validé
               </motion.h2>
             </div>
             <SolutionCarousel />
