@@ -506,7 +506,7 @@ export default function Home() {
         className="mt-12"
         animated={true}
       >
-        <CardGrid columns={2} className="items-end">
+        <CardGrid columns={2} className="items-start">
           <div className="space-y-6">
             <div>
               <motion.p 
