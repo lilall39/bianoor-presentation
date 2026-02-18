@@ -491,7 +491,7 @@ export default function Home() {
           <Card 
             variants={{
               hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0, transition: { duration: 1.0, ease: [0.22, 1, 0.36, 1] } }
+              visible: { opacity: 1, y: 0, transition: { duration: 1.4, ease: [0.22, 1, 0.36, 1] } }
             }}
             title="25 000"
             description="Membres sur Facebook."
@@ -500,7 +500,7 @@ export default function Home() {
           <Card 
             variants={{
               hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0, transition: { duration: 1.0, ease: [0.22, 1, 0.36, 1] } }
+              visible: { opacity: 1, y: 0, transition: { duration: 1.4, ease: [0.22, 1, 0.36, 1] } }
             }}
             title="B2B"
             description="Référencements historiques collectivités."
@@ -509,7 +509,7 @@ export default function Home() {
           <Card 
             variants={{
               hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0, transition: { duration: 1.0, ease: [0.22, 1, 0.36, 1] } }
+              visible: { opacity: 1, y: 0, transition: { duration: 1.4, ease: [0.22, 1, 0.36, 1] } }
             }}
             title="Filières"
             description="Sourcing direct Algérie."
