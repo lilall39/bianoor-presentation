@@ -471,65 +471,11 @@ export default function Home() {
         <RisksCarousel />
       </Section>
 
-      {/* 4. Cibles clients & usages */}
-      <Section 
-        className="pt-10 md:pt-16"
-        animated={true}
-      >
-        <CardGrid columns={2} className="items-end">
-          <div className="space-y-6">
-            <div>
-              <motion.p 
-                variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
-                }}
-                className="text-base font-bold uppercase tracking-widest mb-3 md:mb-4 text-accent"
-              >
-                Cibles
-              </motion.p>
-              <motion.h2 
-                variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
-                }}
-                className="text-[12px] min-[375px]:text-[14px] min-[425px]:text-[16px] sm:text-2xl md:text-3xl lg:text-4xl mb-4 sm:mb-6 leading-tight font-serif font-medium tracking-tighter whitespace-nowrap"
-              >
-                Quels consommateurs pour Bionoor ?
-              </motion.h2>
-            </div>
-            <TargetCarousel />
-          </div>
-          <div className="space-y-6">
-            <div>
-              <motion.p 
-                variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
-                }}
-                className="text-base font-bold uppercase tracking-widest mb-3 md:mb-4 text-accent"
-              >
-                Notre Solution
-              </motion.p>
-              <motion.h2 
-                variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
-                }}
-                className="text-[10px] min-[320px]:text-[11px] min-[375px]:text-[12px] min-[425px]:text-[14px] sm:text-2xl md:text-3xl lg:text-4xl mb-4 sm:mb-6 leading-tight font-serif font-medium tracking-tighter whitespace-nowrap"
-              >
-                Bio certifié et conforme par process validé
-              </motion.h2>
-            </div>
-            <SolutionCarousel />
-          </div>
-        </CardGrid>
-      </Section>
-
       {/* 6. Produit phase 1 — Dattes */}
       <Section 
         subtitle="Phase 1"
         title="Les Dattes : Notre produit d'entrée"
+        className="mt-12"
       >
         <TwoColumns>
           <div className="space-y-6 text-justify">
@@ -561,6 +507,12 @@ export default function Home() {
           </div>
         </TwoColumns>
       </Section>
+
+      {/* 4. Cibles clients & usages */}
+      <Section 
+        className="mt-12"
+        animated={true}
+      >
 
       {/* 7. Avantage clé — humain & filières */}
       <Section 
