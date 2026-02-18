@@ -316,7 +316,7 @@ export default function Home() {
       {/* 3. Marché & opportunité */}
       <Section 
         subtitle="Opportunité"
-        title="Marché des dattes Bio en croissance en Europe."
+        title="Marché des dattes et du Bio en croissance en Europe."
         dark
         animated={true}
       >
