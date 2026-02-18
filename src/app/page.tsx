@@ -355,7 +355,7 @@ export default function Home() {
               hidden: { opacity: 0, y: 24 },
               visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
             }}
-            title="Croissance du marché des dattes Bio : environs 6% / an"
+            title="Croissance du marché des dattes Bio : environ 6% / an"
             description={
               <>
                 <strong>La demande de dattes bio croît</strong> en Europe, portée par l’<strong>intérêt croissant</strong> des consommateurs pour les aliments naturels, sains et certifiés. <strong>Les importations</strong> de dattes biologiques <strong>vers l’UE augmentent</strong>. En France, une part croissante des dattes consommées est <strong>issue de l’agriculture biologique</strong>. <strong>Le segment bio</strong> représente une part significative du marché retail des dattes conditionnées <strong>(estimé à plus de 100 millions d’euros)</strong>, avec une progression régulière observée au cours des dernières années. Les données de marché indiquent <strong>une dynamique soutenue</strong> pour les dattes bio, avec une <strong>croissance annuelle</strong> moyenne observée autour de 4–6 %.
