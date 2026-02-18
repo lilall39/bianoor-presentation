@@ -202,6 +202,103 @@ function SolutionCarousel() {
   );
 }
 
+function RisksCarousel() {
+  const [current, setCurrent] = useState(0);
+  const slides = [
+    {
+      title: "Approvisionnement & climat",
+      text: "Dépendance aux récoltes (conditions climatiques, rendements variables, aléas agricoles)."
+    },
+    {
+      title: "Qualité, bio & conformité halal",
+      text: "Maintenir une qualité constante, des certifications fiables et des process contrôlés à chaque étape."
+    },
+    {
+      title: "Logistique, stockage & coûts",
+      text: "Contraintes de transport international, conservation des produits, variations des coûts d’importation."
+    },
+    {
+      title: "Pression concurrentielle sur les prix",
+      text: "Concurrence d’acteurs low-cost, importateurs peu différenciés et produits de qualité inégale."
+    },
+    {
+      title: "Saisonnalité de la demande",
+      text: "Forte concentration des ventes sur certaines périodes (ex : Ramadan), nécessité d’anticiper les volumes et les stocks."
+    },
+    {
+      title: "Risque réglementaire & administratif",
+      text: "Évolutions des normes (bio, import, traçabilité), contraintes douanières et contrôles sanitaires."
+    }
+  ];
+
+  const next = () => setCurrent((prev) => (prev + 1) % slides.length);
+  const prev = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+
+  const carouselVariants: Variants = {
+    hidden: { opacity: 0, y: 24 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+  };
+
+  return (
+    <motion.div 
+      variants={carouselVariants}
+      className="relative group w-full"
+    >
+      <div 
+        className="overflow-hidden rounded-2xl shadow-lg min-h-[200px] md:min-h-[220px] flex items-center relative"
+        style={{
+          background: 'linear-gradient(to bottom right, #F0E6DD, #E2D1C3) padding-box, linear-gradient(to bottom right, #9B6B4A, #4A3224) border-box',
+          border: '2px solid transparent'
+        }}
+      >
+        <motion.div 
+          className="flex w-full h-full cursor-grab active:cursor-grabbing"
+          animate={{ x: `-${current * 100}%` }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          onDragEnd={(_, info) => {
+            if (info.offset.x < -50) next();
+            if (info.offset.x > 50) prev();
+          }}
+        >
+          {slides.map((slide, i) => (
+            <div key={i} className="w-full flex-shrink-0 p-6 md:p-8 flex flex-col items-center justify-center text-center space-y-3">
+              <h3 className="text-xl md:text-2xl font-serif font-bold text-[#2D1E14]">{slide.title}</h3>
+              <p className="text-base md:text-lg text-[#2D1E14]/80 leading-relaxed max-w-[85%] mx-auto">
+                {slide.text}
+              </p>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+
+      <button 
+        onClick={prev}
+        className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 border border-black/5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity hidden md:block text-accent hover:bg-white z-10"
+      >
+        <ChevronLeft size={24} />
+      </button>
+      <button 
+        onClick={next}
+        className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 border border-black/5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity hidden md:block text-accent hover:bg-white z-10"
+      >
+        <ChevronRight size={24} />
+      </button>
+
+      <div className="flex justify-center gap-2 mt-4">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-2 h-2 rounded-full transition-all ${current === i ? 'bg-accent w-6' : 'bg-accent/20'}`}
+          />
+        ))}
+      </div>
+    </motion.div>
+  );
+}
+
 function FadeInScroll({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -364,6 +461,14 @@ export default function Home() {
             className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-[#2D1E14] [&_h3]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tight [&_h3]:!mt-0 [&_h3]:!mb-2 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1 h-full shadow-sm"
           />
         </CardGrid>
+      </Section>
+
+      <Section 
+        title="Risques identifiés & défis du marché des dattes (BIONOOR)"
+        animated={true}
+        className="pt-10 md:pt-16"
+      >
+        <RisksCarousel />
       </Section>
 
       {/* 4. Cibles clients & usages */}
