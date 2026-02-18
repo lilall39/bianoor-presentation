@@ -336,7 +336,7 @@ export default function Home() {
               visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
             }}
             title="Hausse du Bio"
-            description="• Le marché bio européen pèse désormais autour de ~58–60 Md€ (ventes retail Europe récentes, record 2024).\n• En France, le rapport annuel de l'Agence BIO montre une dynamique constante malgré les variations de marché.\n• La part de surface agricole bio en Europe continue d’augmenter (zone UE ≈ 10–10.5 % de la SAU)."
+            description="La demande de dattes bio croît en Europe, portée par l’intérêt croissant des consommateurs pour les aliments naturels, sains et certifiés. Les importations de dattes biologiques vers l’UE augmentent, reflétant une tendance positive de la demande bio.\n\nEn France, une part croissante des dattes consommées est issue de l’agriculture biologique. Le segment bio représente une part significative du marché retail des dattes conditionnées (estimé à plus de 100 millions d’euros), avec une progression régulière observée au cours des dernières années.\n\nLes données de marché indiquent une dynamique soutenue pour les dattes bio, avec une croissance annuelle moyenne observée autour de 4–6 %."
             className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1"
           />
         </CardGrid>
