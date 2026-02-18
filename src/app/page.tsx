@@ -339,15 +339,6 @@ export default function Home() {
             description="• Le marché bio européen pèse désormais autour de ~58–60 Md€ (ventes retail Europe récentes, record 2024).\n• En France, le rapport annuel de l'Agence BIO montre une dynamique constante malgré les variations de marché.\n• La part de surface agricole bio en Europe continue d’augmenter (zone UE ≈ 10–10.5 % de la SAU)."
             className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1"
           />
-          <Card 
-            variants={{
-              hidden: { opacity: 0, y: 24 },
-              visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
-            }}
-            title="Segment peu structuré"
-            description="Le marché halal en grande distribution en France reste fragmenté (~480 M € GD, ~6 Md € total).\n• Marques certifiées comme Zakia, Isla Délice, Wassila, Italal existent, mais rare combinaison bio + halal.\n• Très peu de marques européennes établies avec une offre bio + halal crédible (segment encore jeune)"
-            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-2"
-          />
         </CardGrid>
       </Section>
 
