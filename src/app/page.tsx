@@ -316,7 +316,7 @@ export default function Home() {
       {/* 3. Marché & opportunité */}
       <Section 
         subtitle="Opportunité"
-        title="Marché halal et bio en croissance en Europe."
+        title="Marché bio en croissance en Europe."
         dark
         animated={true}
       >
