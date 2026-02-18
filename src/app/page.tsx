@@ -331,9 +331,9 @@ export default function Home() {
               <>
                 La consommation de dattes en Europe <strong>progresse constamment</strong>, portée par l’intérêt pour les aliments naturels, bio et énergétiques. <strong>Les importations augmentent chaque année</strong>, reflétant une demande dynamique.
                 <br /><br />
-                En France, plusieurs milliers de tonnes de dattes sont consommées annuellement, avec un marché retail estimé à plus de 100 millions d’euros pour les dattes conditionnées.
+                En France, <strong>plusieurs milliers de tonnes de dattes</strong> sont consommées annuellement, avec <strong>un marché retail estimé à plus de 100 millions d’euros</strong> pour les dattes conditionnées.
                 <br /><br />
-                Les données observées indiquent une dynamique positive de la demande, avec une croissance annuelle moyenne d’environ 4–5 %, particulièrement marquée autour de périodes culturelles comme le Ramadan.
+                Les données observées indiquent une <strong>dynamique positive</strong> de la demande, avec une <strong>croissance annuelle</strong> moyenne d’environ 4–5 %, particulièrement marquée autour de périodes culturelles comme le Ramadan.
               </>
             }
             className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[19px] [&_h3]:tracking-tighter [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1 h-full"
