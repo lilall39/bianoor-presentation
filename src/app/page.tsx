@@ -66,7 +66,8 @@ export default function Home() {
       {/* 1. Hero */}
       <Hero 
         title="BIONOOR"
-        subtitle="Bio halal premium depuis 20 ans"
+        subtitle="Bio halal premium depuis plus de 20 ans"
+        description="BIONOOR est une marque éthique ancrée depuis plus de 20 ans dans l’alimentation bio et halal, fondée autour des valeurs humaines de son dirigeant."
         imageSrc="/images/hero-oasis-new.png"
       />
 
