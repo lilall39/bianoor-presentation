@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { motion, Variants } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import { Card, CardGrid } from '@/components/CardGrid';
@@ -26,19 +28,20 @@ import {
 } from 'lucide-react';
 
 function TargetCarousel() {
+  const { t } = useLanguage();
   const [current, setCurrent] = useState(0);
   const slides = [
     {
-      title: "Cible principale",
-      text: "Familles musulmanes résidant en France et en Europe à la recherche de produits sains."
+      title: t('target1_title'),
+      text: t('target1_text')
     },
     {
-      title: "Cibles secondaires",
-      text: "Consommateurs bio non musulmans et collectivités (B2B)."
+      title: t('target2_title'),
+      text: t('target2_text')
     },
     {
-      title: "Usages",
-      text: "Consommation quotidienne, période du Ramadan, et coffrets cadeaux."
+      title: t('target3_title'),
+      text: t('target3_text')
     }
   ];
 
@@ -56,7 +59,7 @@ function TargetCarousel() {
       className="relative group w-full"
     >
       <div 
-        className="overflow-hidden rounded-2xl shadow-lg min-h-[225px] md:min-h-[245px] flex items-center relative"
+        className="overflow-hidden rounded-2xl shadow-lg min-h-[225px] md:min-h-[245px] flex items-center relative touch-pan-y"
         style={{
           background: 'linear-gradient(to bottom right, #F0E6DD, #E2D1C3) padding-box, linear-gradient(to bottom right, #9B6B4A, #4A3224) border-box',
           border: '2px solid transparent'
@@ -69,14 +72,14 @@ function TargetCarousel() {
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           onDragEnd={(_, info) => {
-            if (info.offset.x < -50) next();
-            if (info.offset.x > 50) prev();
+            if (info.offset.x < -30) next();
+            if (info.offset.x > 30) prev();
           }}
         >
           {slides.map((slide, i) => (
             <div key={i} className="w-full flex-shrink-0 p-6 md:p-8 flex flex-col items-center justify-center text-center space-y-4">
-              <h3 className="text-2xl md:text-3xl font-bold text-[#2D1E14]">{slide.title}</h3>
-              <p className="text-lg md:text-xl text-[#2D1E14]/80 leading-relaxed max-w-[90%] mx-auto">
+              <h3 className="text-xl md:text-3xl font-bold text-[#2D1E14]">{slide.title}</h3>
+              <p className="text-base md:text-xl text-[#2D1E14]/80 leading-relaxed max-w-[90%] mx-auto">
                 {slide.text}
               </p>
             </div>
@@ -111,23 +114,24 @@ function TargetCarousel() {
 }
 
 function SolutionCarousel() {
+  const { t } = useLanguage();
   const [current, setCurrent] = useState(0);
   const slides = [
     {
-      title: "Notre Solution",
-      text: "Bio certifié et conforme par process validé"
+      title: t('sol1_title'),
+      text: t('sol1_text')
     },
     {
-      title: "Bio certifié",
-      text: "De l’origine Algérie (zones identifiées) jusqu’au consommateur final."
+      title: t('sol2_title'),
+      text: t('sol2_text')
     },
     {
-      title: "Procédures respectées et validées",
-      text: "Procédures respectées à chaque étape de la chaîne de production."
+      title: t('sol3_title'),
+      text: t('sol3_text')
     },
     {
-      title: "Qualité & transparence",
-      text: "Produits sains et naturels, qualité constante, transparence totale sur les process."
+      title: t('sol4_title'),
+      text: t('sol4_text')
     }
   ];
 
@@ -145,7 +149,7 @@ function SolutionCarousel() {
       className="relative group w-full"
     >
       <div 
-        className="overflow-hidden rounded-2xl shadow-lg min-h-[225px] md:min-h-[245px] flex items-center relative"
+        className="overflow-hidden rounded-2xl shadow-lg min-h-[225px] md:min-h-[245px] flex items-center relative touch-pan-y"
         style={{
           background: 'linear-gradient(to bottom right, #E2D1C3, #C5B4A7) padding-box, linear-gradient(to bottom right, #9B6B4A, #4A3224) border-box',
           border: '2px solid transparent'
@@ -158,8 +162,8 @@ function SolutionCarousel() {
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           onDragEnd={(_, info) => {
-            if (info.offset.x < -50) next();
-            if (info.offset.x > 50) prev();
+            if (info.offset.x < -30) next();
+            if (info.offset.x > 30) prev();
           }}
         >
           {slides.map((slide, i) => (
@@ -167,8 +171,8 @@ function SolutionCarousel() {
               key={i} 
               className="w-full flex-shrink-0 p-6 md:p-8 flex flex-col items-center justify-center text-center space-y-4"
             >
-              <h3 className="text-2xl md:text-3xl font-bold text-[#2D1E14]">{slide.title}</h3>
-              <p className="text-lg md:text-xl text-[#2D1E14] leading-relaxed max-w-[90%] mx-auto">
+              <h3 className="text-xl md:text-3xl font-bold text-[#2D1E14]">{slide.title}</h3>
+              <p className="text-base md:text-xl text-[#2D1E14] leading-relaxed max-w-[90%] mx-auto">
                 {slide.text}
               </p>
             </div>
@@ -203,31 +207,32 @@ function SolutionCarousel() {
 }
 
 function RisksCarousel() {
+  const { t } = useLanguage();
   const [current, setCurrent] = useState(0);
   const slides = [
     {
-      title: "Approvisionnement & climat",
-      text: "Dépendance aux récoltes (conditions climatiques, rendements variables, aléas agricoles)."
+      title: t('risk1_title'),
+      text: t('risk1_text')
     },
     {
-      title: "Qualité, bio & conformité halal",
-      text: "Maintenir une qualité constante, des certifications fiables et des process contrôlés à chaque étape."
+      title: t('risk2_title'),
+      text: t('risk2_text')
     },
     {
-      title: "Logistique, stockage & coûts",
-      text: "Contraintes de transport international, conservation des produits, variations des coûts d’importation."
+      title: t('risk3_title'),
+      text: t('risk3_text')
     },
     {
-      title: "Pression concurrentielle sur les prix",
-      text: "Concurrence d’acteurs low-cost, importateurs peu différenciés et produits de qualité inégale."
+      title: t('risk4_title'),
+      text: t('risk4_text')
     },
     {
-      title: "Saisonnalité de la demande",
-      text: "Forte concentration des ventes sur certaines périodes (ex : Ramadan), nécessité d’anticiper les volumes et les stocks."
+      title: t('risk5_title'),
+      text: t('risk5_text')
     },
     {
-      title: "Risque réglementaire & administratif",
-      text: "Évolutions des normes (bio, import, traçabilité), contraintes douanières et contrôles sanitaires."
+      title: t('risk6_title'),
+      text: t('risk6_text')
     }
   ];
 
@@ -245,7 +250,7 @@ function RisksCarousel() {
       className="relative group w-full"
     >
       <div 
-        className="overflow-hidden rounded-2xl shadow-lg min-h-[200px] md:min-h-[220px] flex items-center relative"
+        className="overflow-hidden rounded-2xl shadow-lg min-h-[200px] md:min-h-[220px] flex items-center relative touch-pan-y"
         style={{
           background: 'linear-gradient(to bottom right, #F0E6DD, #E2D1C3) padding-box, linear-gradient(to bottom right, #9B6B4A, #4A3224) border-box',
           border: '2px solid transparent'
@@ -258,16 +263,28 @@ function RisksCarousel() {
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           onDragEnd={(_, info) => {
-            if (info.offset.x < -50) next();
-            if (info.offset.x > 50) prev();
+            if (info.offset.x < -30) next();
+            if (info.offset.x > 30) prev();
           }}
         >
           {slides.map((slide, i) => (
-            <div key={i} className="w-full flex-shrink-0 p-6 md:p-8 flex flex-col items-center justify-center text-center space-y-3">
-              <h3 className="text-xl md:text-2xl font-serif font-bold text-[#2D1E14]">{slide.title}</h3>
-              <p className="text-base md:text-lg text-[#2D1E14]/80 leading-relaxed max-w-[85%] mx-auto">
-                {slide.text}
-              </p>
+            <div key={i} className="w-full flex-shrink-0 p-6 md:p-8 flex flex-col items-center justify-center text-center space-y-3 relative overflow-hidden">
+              {/* Background Image with Overlay */}
+              <div className="absolute inset-0 z-0">
+                <img 
+                  src="/images/bg-oasis-risks.png" 
+                  alt="" 
+                  className="w-full h-full object-cover opacity-20"
+                />
+                <div className="absolute inset-0 bg-white/40" />
+              </div>
+              
+              <div className="relative z-10">
+                <h3 className="text-xl md:text-2xl font-serif font-bold text-[#2D1E14]">{slide.title}</h3>
+                <p className="text-sm md:text-lg text-[#2D1E14]/80 leading-relaxed max-w-[85%] mx-auto">
+                  {slide.text}
+                </p>
+              </div>
             </div>
           ))}
         </motion.div>
@@ -299,60 +316,30 @@ function RisksCarousel() {
   );
 }
 
-function FadeInScroll({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) {
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => setIsVisible(true), delay);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [delay]);
-
-  return (
-    <div
-      ref={ref}
-      className={`h-full transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${
-        isVisible 
-          ? 'opacity-100 translate-y-0 scale-100' 
-          : 'opacity-0 translate-y-8 scale-[0.95] blur-[2px]'
-      }`}
-    >
-      {children}
-    </div>
-  );
-}
-
 export default function Home() {
+  const { t, language } = useLanguage();
+
   return (
     <main>
+      <LanguageSwitcher />
       <div className="bg-[#EFE9E1] pt-6">
         <div className="w-full py-4 flex items-center justify-center px-4 border-b border-accent/30 shadow-sm">
           <span className="text-[10px] sm:text-xs md:text-base font-bold tracking-wider text-[#2D1E14] uppercase text-center leading-tight">
-            BIONOOR — Présentation · Marché & opportunité d’investissement
+            {t('nav_title')}
           </span>
         </div>
       </div>
       {/* 1. Hero */}
       <Hero 
-        title="BIONOOR"
-        subtitle="Bio halal premium depuis plus de 20 ans"
-        description="BIONOOR est une marque éthique ancrée depuis plus de 20 ans dans l’alimentation bio et halal, fondée autour des valeurs humaines de son dirigeant."
+        title={t('hero_title')}
+        subtitle={t('hero_subtitle')}
+        description={t('hero_description')}
         imageSrc="/images/hero-oasis-blue-sky.png"
       />
 
       <Section 
-        subtitle="Le Problème"
-        title="Une demande forte, une offre peu lisible."
+        subtitle={t('problem_subtitle')}
+        title={t('problem_title')}
         className="pt-10 md:pt-16"
         animated={true}
         viewportAmount={0.01}
@@ -367,9 +354,9 @@ export default function Home() {
                 hidden: { opacity: 0, y: 24 },
                 visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
               }}
-              className="text-xl text-gray-600 leading-relaxed"
+              className="text-lg md:text-xl text-gray-600 leading-relaxed"
             >
-              Le marché bio + traçabilité manque de marques fortes et lisibles.
+              {t('problem_intro')}
             </motion.p>
             <ul className="space-y-4">
               <motion.li 
@@ -380,7 +367,7 @@ export default function Home() {
                 className="flex gap-4"
               >
                 <AlertTriangle className="text-accent shrink-0" />
-                <span><strong>Origine floue :</strong> Difficulté à tracer la provenance réelle des produits.</span>
+                <span className="text-sm md:text-base"><strong>{t('problem_item1_title')}</strong> {t('problem_item1_desc')}</span>
               </motion.li>
               <motion.li 
                 variants={{
@@ -390,7 +377,7 @@ export default function Home() {
                 className="flex gap-4"
               >
                 <AlertTriangle className="text-accent shrink-0" />
-                <span><strong>Traçabilité limitée :</strong> Manque de transparence sur la chaîne de production.</span>
+                <span className="text-sm md:text-base"><strong>{t('problem_item2_title')}</strong> {t('problem_item2_desc')}</span>
               </motion.li>
               <motion.li 
                 variants={{
@@ -400,7 +387,7 @@ export default function Home() {
                 className="flex gap-4"
               >
                 <AlertTriangle className="text-accent shrink-0" />
-                <span><strong>Qualité variable :</strong> Constance de qualité souvent aléatoire.</span>
+                <span className="text-sm md:text-base"><strong>{t('problem_item3_title')}</strong> {t('problem_item3_desc')}</span>
               </motion.li>
             </ul>
           </motion.div>
@@ -424,8 +411,8 @@ export default function Home() {
 
       {/* 3. Marché & opportunité */}
       <Section 
-        subtitle="Opportunité"
-        title="Marché des dattes et du Bio en croissance en Europe."
+        subtitle={t('opportunity_subtitle')}
+        title={t('opportunity_title')}
         dark
         animated={true}
       >
@@ -435,36 +422,42 @@ export default function Home() {
               hidden: { opacity: 0, y: 24 },
               visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
             }}
-            title="Croissance du marché des dattes : environ 5% / an"
-            description={
-              <>
-                La consommation de dattes en Europe <strong>progresse constamment</strong>, portée par l’intérêt pour les aliments naturels, bio et énergétiques. <strong>Les importations augmentent chaque année</strong>, reflétant une demande dynamique.
-                <br /><br />
-                En France, <strong>plusieurs milliers de tonnes de dattes</strong> sont consommées annuellement, avec <strong>un marché retail estimé à plus de 100 millions d’euros</strong> pour les dattes conditionnées.
-                <br /><br />
-                Les données observées indiquent une <strong>dynamique positive</strong> de la demande, avec une <strong>croissance annuelle</strong> moyenne d’environ 4–5 %, particulièrement marquée autour de périodes culturelles comme le Ramadan.
-              </>
-            }
-            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-[#2D1E14] [&_h3]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tight [&_h3]:!mt-0 [&_h3]:!mb-2 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1 h-full shadow-sm"
+            title={t('opp_card1_title')}
+            description={t('opp_card1_desc')}
+            className="bg-[#F0E6DD]/40 !border-2 !border-[#2D1E14]/30 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-[#2D1E14] [&_h3]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tight [&_h3]:!mt-0 [&_h3]:!mb-2 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1 h-full shadow-sm"
           />
           <Card 
             variants={{
               hidden: { opacity: 0, y: 24 },
               visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
             }}
-            title="Croissance du marché des dattes Bio : environ 6% / an"
-            description={
-              <>
-                <strong>La demande de dattes bio croît</strong> en Europe, portée par l’<strong>intérêt croissant</strong> des consommateurs pour les aliments naturels, sains et certifiés. <strong>Les importations</strong> de dattes biologiques <strong>vers l’UE augmentent</strong>. En France, une part croissante des dattes consommées est <strong>issue de l’agriculture biologique</strong>. <strong>Le segment bio</strong> représente une part significative du marché retail des dattes conditionnées <strong>(estimé à plus de 100 millions d’euros)</strong>, avec une progression régulière observée au cours des dernières années. Les données de marché indiquent <strong>une dynamique soutenue</strong> pour les dattes bio, avec une <strong>croissance annuelle</strong> moyenne observée autour de 4–6 %.
-              </>
-            }
-            className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-[#2D1E14] [&_h3]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tight [&_h3]:!mt-0 [&_h3]:!mb-2 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1 h-full shadow-sm"
+            title={t('opp_card2_title')}
+            description={t('opp_card2_desc')}
+            className="bg-[#F0E6DD]/40 !border-2 !border-[#2D1E14]/30 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-[#2D1E14] [&_h3]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tight [&_h3]:!mt-0 [&_h3]:!mb-2 [&_p]:whitespace-pre-line [&_p]:text-justify md:col-span-1 h-full shadow-sm"
           />
         </CardGrid>
       </Section>
 
       <Section 
-        title="Risques identifiés & défis du marché des dattes (BIONOOR)"
+        title={t('competition_title')}
+        animated={true}
+        className="mt-12 !py-4 text-center"
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.p 
+            variants={{
+              hidden: { opacity: 0, y: 24 },
+              visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+            }}
+            className="text-lg md:text-xl text-gray-600 leading-relaxed"
+          >
+            {t('competition_text')}
+          </motion.p>
+        </div>
+      </Section>
+
+      <Section 
+        title={t('risks_title')}
         animated={true}
         className="mt-12"
       >
@@ -473,26 +466,26 @@ export default function Home() {
 
       {/* 6. Produit phase 1 — Dattes */}
       <Section 
-        subtitle="Phase 1"
-        title="Les Dattes : Notre produit d'entrée"
+        subtitle={t('phase1_subtitle')}
+        title={t('phase1_title')}
         className="mt-12"
       >
         <TwoColumns>
           <div className="space-y-6 text-justify">
             <div className="p-4 bg-[#F0E6DD] border-l-4 border-accent inline-block">
-              <span className="font-bold text-accent">Notation qualité 18,2/20 (experts)</span>
+              <span className="font-bold text-accent">{t('phase1_quality')}</span>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              Produit B2B existant depuis 20 ans with une identité algérienne forte. Le bio est rare sur ce segment, ce qui nous confère un avantage compétitif majeur.
+              {t('phase1_desc')}
             </p>
             <CardGrid columns={1} className="!gap-4 text-left">
               <div className="flex items-center gap-4 p-4 bg-[#F0E6DD]/40 rounded-xl">
                 <ShoppingCart className="text-accent w-5 h-5" />
-                <span>Formats : boîtes famille, coffrets premium, cadeaux B2B.</span>
+                <span className="text-sm md:text-base">{t('phase1_formats')}</span>
               </div>
               <div className="flex items-center gap-4 p-4 bg-[#F0E6DD]/40 rounded-xl">
                 <Calendar className="text-accent w-5 h-5" />
-                <span>Produit à forte récurrence.</span>
+                <span className="text-sm md:text-base">{t('phase1_recurrence')}</span>
               </div>
             </CardGrid>
           </div>
@@ -513,6 +506,55 @@ export default function Home() {
         className="mt-12"
         animated={true}
       >
+        <CardGrid columns={2} className="items-end">
+          <div className="space-y-6">
+            <div>
+              <motion.p 
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+                }}
+                className="text-base font-bold uppercase tracking-widest mb-3 md:mb-4 text-accent"
+              >
+                {t('targets_subtitle')}
+              </motion.p>
+              <motion.h2 
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+                }}
+                className="text-[12px] min-[375px]:text-[14px] min-[425px]:text-[16px] sm:text-2xl md:text-3xl lg:text-4xl mb-4 sm:mb-6 leading-tight font-serif font-medium tracking-tighter whitespace-nowrap"
+              >
+                {t('targets_title')}
+              </motion.h2>
+            </div>
+            <TargetCarousel />
+          </div>
+          <div className="space-y-6">
+            <div>
+              <motion.p 
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+                }}
+                className="text-base font-bold uppercase tracking-widest mb-3 md:mb-4 text-accent"
+              >
+                {t('solution_subtitle')}
+              </motion.p>
+              <motion.h2 
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+                }}
+                className="text-[10px] min-[320px]:text-[11px] min-[375px]:text-[12px] min-[425px]:text-[14px] sm:text-2xl md:text-3xl lg:text-4xl mb-4 sm:mb-6 leading-tight font-serif font-medium tracking-tighter whitespace-nowrap"
+              >
+                {t('solution_title')}
+              </motion.h2>
+            </div>
+            <SolutionCarousel />
+          </div>
+        </CardGrid>
+      </Section>
 
       {/* 7. Avantage clé — humain & filières */}
       <Section 
@@ -530,8 +572,8 @@ export default function Home() {
 
       {/* 8. Actifs existants */}
       <Section 
-        subtitle="Actifs"
-        title="Un socle déjà solide pour décoller."
+        subtitle={t('assets_subtitle')}
+        title={t('assets_title')}
         className="pt-10 md:pt-16"
         animated={true}
       >
@@ -541,8 +583,8 @@ export default function Home() {
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0, transition: { duration: 1.0, ease: [0.22, 1, 0.36, 1] } }
             }}
-            title="10 000"
-            description="Emails qualifiés en base."
+            title={t('asset1_title')}
+            description={t('asset1_desc')}
             className="h-full bg-[#F0E6DD]/40 !border-4 !border-accent !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify shadow-sm"
           />
           <Card 
@@ -550,8 +592,8 @@ export default function Home() {
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0, transition: { duration: 1.4, ease: [0.22, 1, 0.36, 1] } }
             }}
-            title="25 000"
-            description="Membres sur Facebook."
+            title={t('asset2_title')}
+            description={t('asset2_desc')}
             className="h-full bg-[#F0E6DD]/40 !border-4 !border-accent !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify shadow-sm"
           />
           <Card 
@@ -559,8 +601,8 @@ export default function Home() {
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0, transition: { duration: 1.4, ease: [0.22, 1, 0.36, 1] } }
             }}
-            title="B2B"
-            description="Référencements historiques collectivités."
+            title={t('asset3_title')}
+            description={t('asset3_desc')}
             className="h-full bg-[#F0E6DD]/40 !border-4 !border-accent !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify shadow-sm"
           />
           <Card 
@@ -568,8 +610,8 @@ export default function Home() {
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0, transition: { duration: 1.4, ease: [0.22, 1, 0.36, 1] } }
             }}
-            title="Filières"
-            description="Sourcing direct Algérie."
+            title={t('asset4_title')}
+            description={t('asset4_desc')}
             className="h-full bg-[#F0E6DD]/40 !border-4 !border-accent !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify shadow-sm"
           />
         </CardGrid>
@@ -578,26 +620,26 @@ export default function Home() {
 
       {/* 9. Modèle économique */}
       <Section 
-        subtitle="Business Model"
-        title="Marge brute cible ~50 % (retail)."
+        subtitle={t('bm_subtitle')}
+        title={t('bm_title')}
         className="mt-12"
       >
         <TwoColumns>
           <div className="space-y-6 text-gray-600">
-            <p className="text-xl text-foreground font-semibold">D2C e-commerce prioritaire.</p>
-            <p>Le canal direct permet de capter la valeur et d&apos;activer la communauté existante.</p>
+            <p className="text-xl text-foreground font-semibold">{t('bm_d2c')}</p>
+            <p>{t('bm_d2c_desc')}</p>
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
                 <CheckCircle className="text-accent w-5 h-5" />
-                <span>B2B existant maintenu pour le volume.</span>
+                <span className="text-sm md:text-base">{t('bm_b2b')}</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="text-accent w-5 h-5" />
-                <span>Rotation rapide des stocks.</span>
+                <span className="text-sm md:text-base">{t('bm_rotation')}</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="text-accent w-5 h-5" />
-                <span>BFR maîtrisé par les précommandes.</span>
+                <span className="text-sm md:text-base">{t('bm_bfr')}</span>
               </li>
             </ul>
           </div>
@@ -607,24 +649,24 @@ export default function Home() {
 
       {/* 10. Roadmap 12 mois */}
       <Section 
-        subtitle="Roadmap"
-        title="Une montée en puissance maîtrisée."
+        subtitle={t('roadmap_subtitle')}
+        title={t('roadmap_title')}
       >
         <div className="relative border-l-2 border-accent/20 ml-4 space-y-12 pb-8">
-          <div className="relative pl-12">
+          <div className="relative pl-8 md:pl-12">
             <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-accent"></div>
-            <h3 className="text-xl font-bold mb-2">Phase 1 (0–3 mois)</h3>
-            <p className="text-gray-600">Focus dattes only, lancement e-commerce, réactivation base, premières ventes.</p>
+            <h3 className="text-lg md:text-xl font-bold mb-2">{t('roadmap_p1_title')}</h3>
+            <p className="text-sm md:text-base text-gray-600">{t('roadmap_p1_desc')}</p>
           </div>
-          <div className="relative pl-12">
+          <div className="relative pl-8 md:pl-12">
             <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-accent"></div>
-            <h3 className="text-xl font-bold mb-2">Phase 2 (4–6 mois)</h3>
-            <p className="text-gray-600">Structuration logistique, optimisation prix &amp; formats, offres B2B packagées.</p>
+            <h3 className="text-lg md:text-xl font-bold mb-2">{t('roadmap_p2_title')}</h3>
+            <p className="text-sm md:text-base text-gray-600">{t('roadmap_p2_desc')}</p>
           </div>
-          <div className="relative pl-12">
+          <div className="relative pl-8 md:pl-12">
             <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-accent"></div>
-            <h3 className="text-xl font-bold mb-2">Phase 3 (6–12 mois)</h3>
-            <p className="text-gray-600">Nouvelles références (chocolat bio, thé bio, café bio, barres de dattes), montée en volume maîtrisée.</p>
+            <h3 className="text-lg md:text-xl font-bold mb-2">{t('roadmap_p3_title')}</h3>
+            <p className="text-sm md:text-base text-gray-600">{t('roadmap_p3_desc')}</p>
           </div>
         </div>
       </Section>
@@ -632,57 +674,57 @@ export default function Home() {
 
       {/* 11. Financement & objectifs */}
       <Section 
-        subtitle="Financement"
-        title="Besoin de financement : [À compléter]"
+        subtitle={t('finance_subtitle')}
+        title={t('finance_title')}
       >
-        <h4 className="text-xl font-bold mb-8">Utilisation des fonds :</h4>
+        <h4 className="text-lg md:text-xl font-bold mb-8">{t('finance_usage')}</h4>
         <CardGrid columns={3}>
           <Card 
-            title="Produits & sourcing"
+            title={t('fin_item1_title')}
             description="[À compléter]"
             className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
           />
           <Card 
-            title="E-commerce & outils"
+            title={t('fin_item2_title')}
             description="[À compléter]"
             className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
           />
           <Card 
-            title="Activation marketing"
+            title={t('fin_item3_title')}
             description="[À compléter]"
             className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
           />
           <Card 
-            title="Logistique"
+            title={t('fin_item4_title')}
             description="[À compléter]"
             className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
           />
           <Card 
-            title="Sécurité & imprévus"
+            title={t('fin_item5_title')}
             description="[À compléter]"
             className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
           />
         </CardGrid>
-        <div className="mt-12 p-8 bg-accent text-white rounded-2xl">
-          <h4 className="text-xl font-bold mb-4">Objectifs clés :</h4>
-          <p className="opacity-90">Traction B2C, validation marché, décision go/no-go.</p>
+        <div className="mt-12 p-6 md:p-8 bg-accent text-white rounded-2xl">
+          <h4 className="text-lg md:text-xl font-bold mb-4">{t('finance_objectives')}</h4>
+          <p className="text-sm md:text-base opacity-90">{t('finance_objectives_desc')}</p>
         </div>
       </Section>
 
       {/* 12. Risques & mitigation */}
       <Section 
-        subtitle="Risques"
-        title="Pilotage par la data et mitigation."
+        subtitle={t('risk_mitigation_subtitle')}
+        title={t('risk_mitigation_title')}
       >
         <CardGrid columns={2}>
           <Card 
-            title="Risques identifiés"
-            description="Filières saisonnières, logistique, traction B2C, constance qualité."
+            title={t('rm_item1_title')}
+            description={t('rm_item1_desc')}
             className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
           />
           <Card 
-            title="Actions de mitigation"
-            description="Diversification progressive, stocks stratégiques courts, tests marché, pilotage par data."
+            title={t('rm_item2_title')}
+            description={t('rm_item2_desc')}
             className="bg-[#F0E6DD]/40 border-accent/10 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_p]:!text-[#1F1F1F] [&_p]:text-[17px] [&_h3]:!text-accent [&_h3]:text-[22px] [&_h3]:!mt-0 [&_h3]:!mb-1 [&_p]:text-justify"
           />
         </CardGrid>
@@ -690,18 +732,18 @@ export default function Home() {
 
       {/* 13. Équipe & pilotage */}
       <Section 
-        subtitle="Équipe"
-        title="Une expertise solide."
+        subtitle={t('team_subtitle')}
+        title={t('team_title')}
       >
         <TwoColumns align="top">
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Direction</h3>
-            <p className="text-gray-600"><strong>Hadj Khelil :</strong> Sourcing & qualité. Expert bio halal reconnu.</p>
-            <p className="text-gray-600"><strong>Responsable BIONOOR :</strong> Pilotage B2C en interne.</p>
+            <h3 className="text-xl md:text-2xl font-bold">{t('team_direction')}</h3>
+            <p className="text-sm md:text-base text-gray-600"><strong>{t('team_hadj')}</strong></p>
+            <p className="text-sm md:text-base text-gray-600"><strong>{t('team_resp')}</strong></p>
           </div>
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Opérations</h3>
-            <p className="text-gray-600">Prestataires spécialisés au départ pour le site, le CRM, la logistique et le marketing pour une agilité maximale.</p>
+            <h3 className="text-xl md:text-2xl font-bold">{t('team_ops')}</h3>
+            <p className="text-sm md:text-base text-gray-600">{t('team_ops_desc')}</p>
           </div>
         </TwoColumns>
       </Section>
@@ -709,15 +751,15 @@ export default function Home() {
       {/* 14. Conclusion / Pourquoi investir */}
       <Section>
         <CTA 
-          title="Ce projet n&apos;est pas une promesse, c&apos;est la réactivation structurée d&apos;un actif réel."
-          description="Produit déjà validé, marque existante, filières réelles et actifs existants activables. Un financement modeste pour une trajectoire claire vers le cash."
-          buttonText="Lancer, mesurer, décider"
+          title={t('cta_title')}
+          description={t('cta_desc')}
+          buttonText={t('cta_button')}
         />
       </Section>
 
 
       <footer className="py-12 text-center text-gray-400 border-t border-gray-100">
-        <p>© 2026 BIONOOR. Tous droits réservés.</p>
+        <p className="text-sm">{t('footer_copy')}</p>
       </footer>
     </main>
   );

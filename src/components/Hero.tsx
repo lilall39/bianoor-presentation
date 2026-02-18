@@ -67,7 +67,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, description, imageSrc }) =
   return (
     <header 
       ref={containerRef}
-      className="relative w-full h-[58vh] flex flex-col items-center justify-start pt-[10vh] px-4 overflow-hidden"
+      className="relative w-full min-h-[500px] md:h-[58vh] flex flex-col items-center justify-start pt-[8vh] md:pt-[10vh] px-4 overflow-hidden"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -83,13 +83,13 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, description, imageSrc }) =
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center space-y-6 max-w-4xl">
+      <div className="relative z-10 text-center space-y-6 max-w-4xl w-full">
         <div className="space-y-4">
           <motion.h1
             variants={titleVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] font-serif font-medium tracking-tight text-white uppercase px-2"
+            className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] font-serif font-medium tracking-tight text-white uppercase px-2"
             style={{ 
               textShadow: '0 10px 40px rgba(0,0,0,0.5)',
               lineHeight: 0.9
@@ -102,7 +102,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, description, imageSrc }) =
             variants={subtitleVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-[0.1em] uppercase"
+            className="text-base sm:text-xl md:text-2xl font-bold text-white tracking-[0.1em] uppercase px-4"
             style={{ 
               textShadow: '0 4px 15px rgba(0,0,0,0.6)'
             }}
@@ -116,7 +116,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, description, imageSrc }) =
             variants={descriptionVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="text-base sm:text-lg md:text-xl text-white max-w-2xl mx-auto leading-relaxed font-bold"
+            className="text-sm sm:text-lg md:text-xl text-white max-w-2xl mx-auto leading-relaxed font-bold px-4"
             style={{ 
               textShadow: '0 4px 15px rgba(0,0,0,0.6)'
             }}

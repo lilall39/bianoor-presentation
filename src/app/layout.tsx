@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
-  title: "BIONOOR - Bio Halal Premium",
-  description: "Acteur historique du bio halal en France, BIONOOR a construit une communauté fidèle et des filières solides.",
+  title: "BIONOOR - Bio Premium",
+  description: "BIONOOR est une marque éthique ancrée depuis plus de 20 ans dans l’alimentation bio.",
 };
 
 export default function RootLayout({
@@ -14,7 +15,9 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className="antialiased">
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

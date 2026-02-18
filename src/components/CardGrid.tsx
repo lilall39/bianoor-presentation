@@ -15,11 +15,11 @@ export const Card: React.FC<CardProps> = ({ title, description, icon, className 
   return (
     <motion.div 
       variants={variants}
-      className={`p-8 bg-[#F0E6DD]/30 rounded-2xl border border-accent/10 hover:border-accent/20 hover:shadow-xl hover:shadow-accent/5 transition-all duration-300 ${className}`}
+      className={`p-6 sm:p-8 bg-[#F0E6DD]/30 rounded-2xl border border-accent/10 hover:border-accent/20 hover:shadow-xl hover:shadow-accent/5 transition-all duration-300 ${className}`}
     >
-      {icon && <div className="mb-6 text-accent">{icon}</div>}
-      <h3 className="text-xl font-bold mb-4">{title}</h3>
-      <p className="text-gray-600 leading-relaxed">{description}</p>
+      {icon && <div className="mb-4 sm:mb-6 text-accent">{icon}</div>}
+      <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">{title}</h3>
+      <div className="text-sm sm:text-base text-gray-600 leading-relaxed">{description}</div>
     </motion.div>
   );
 };
