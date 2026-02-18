@@ -73,81 +73,83 @@ export default function Home() {
       />
 
       {/* 2. Problème marché */}
-      <Section 
-        subtitle="Le Problème"
-        title="Une demande forte, une offre peu lisible."
-        className="pt-10 md:pt-16"
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.1 }}
+        variants={{
+          visible: { transition: { staggerChildren: 0.15 } },
+          hidden: {}
+        }}
       >
-        <TwoColumns>
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
-            variants={{
-              visible: { transition: { staggerChildren: 0.1 } },
-              hidden: {}
-            }}
-            className="space-y-6 text-justify"
-          >
-            <motion.p 
-              variants={{
-                hidden: { opacity: 0, y: 12 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-              }}
-              className="text-xl text-gray-600 leading-relaxed"
-            >
-              Le marché bio + halal + traçabilité manque de marques fortes et lisibles.
-            </motion.p>
-            <ul className="space-y-4">
-              <motion.li 
+        <Section 
+          subtitle="Le Problème"
+          title="Une demande forte, une offre peu lisible."
+          className="pt-10 md:pt-16"
+          animated={true}
+        >
+          <TwoColumns>
+            <div className="space-y-6 text-justify">
+              <motion.p 
                 variants={{
-                  hidden: { opacity: 0, y: 12 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                  hidden: { opacity: 0, y: 16 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } }
                 }}
-                className="flex gap-4"
+                className="text-xl text-gray-600 leading-relaxed"
               >
-                <AlertTriangle className="text-accent shrink-0" />
-                <span><strong>Origine floue :</strong> Difficulté à tracer la provenance réelle des produits.</span>
-              </motion.li>
-              <motion.li 
-                variants={{
-                  hidden: { opacity: 0, y: 12 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-                }}
-                className="flex gap-4"
-              >
-                <AlertTriangle className="text-accent shrink-0" />
-                <span><strong>Traçabilité limitée :</strong> Manque de transparence sur la chaîne de production.</span>
-              </motion.li>
-              <motion.li 
-                variants={{
-                  hidden: { opacity: 0, y: 12 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-                }}
-                className="flex gap-4"
-              >
-                <AlertTriangle className="text-accent shrink-0" />
-                <span><strong>Qualité variable :</strong> Constance de qualité souvent aléatoire.</span>
-              </motion.li>
-            </ul>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.96 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="shadow-xl rounded-2xl border border-black/5 overflow-hidden"
-          >
-            <div className="relative aspect-[4/3]">
-              <img 
-                src="/images/probleme-marche-dattes.png" 
-                alt="Visualisation des freins du marché" 
-                className="w-full h-full object-cover"
-              />
+                Le marché bio + halal + traçabilité manque de marques fortes et lisibles.
+              </motion.p>
+              <ul className="space-y-4">
+                <motion.li 
+                  variants={{
+                    hidden: { opacity: 0, y: 16 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } }
+                  }}
+                  className="flex gap-4"
+                >
+                  <AlertTriangle className="text-accent shrink-0" />
+                  <span><strong>Origine floue :</strong> Difficulté à tracer la provenance réelle des produits.</span>
+                </motion.li>
+                <motion.li 
+                  variants={{
+                    hidden: { opacity: 0, y: 16 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } }
+                  }}
+                  className="flex gap-4"
+                >
+                  <AlertTriangle className="text-accent shrink-0" />
+                  <span><strong>Traçabilité limitée :</strong> Manque de transparence sur la chaîne de production.</span>
+                </motion.li>
+                <motion.li 
+                  variants={{
+                    hidden: { opacity: 0, y: 16 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } }
+                  }}
+                  className="flex gap-4"
+                >
+                  <AlertTriangle className="text-accent shrink-0" />
+                  <span><strong>Qualité variable :</strong> Constance de qualité souvent aléatoire.</span>
+                </motion.li>
+              </ul>
             </div>
-          </motion.div>
-        </TwoColumns>
-      </Section>
+            <motion.div 
+              variants={{
+                hidden: { opacity: 0, scale: 0.96 },
+                visible: { opacity: 1, scale: 1, transition: { duration: 1.2, ease: "easeOut" } }
+              }}
+              className="shadow-xl rounded-2xl border border-black/5 overflow-hidden"
+            >
+              <div className="relative aspect-[4/3]">
+                <img 
+                  src="/images/probleme-marche-dattes.png" 
+                  alt="Visualisation des freins du marché" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+          </TwoColumns>
+        </Section>
+      </motion.div>
 
       {/* 3. Marché & opportunité */}
       <Section 
