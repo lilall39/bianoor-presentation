@@ -76,8 +76,10 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, description, imageSrc }) =
           alt="Bionoor Hero" 
           className="w-full h-full object-cover scale-105"
         />
-        {/* Light dark overlay (10-15% max) */}
-        <div className="absolute inset-0 bg-black/15" />
+        {/* Dark overlay for white text contrast (25-30%) */}
+        <div className="absolute inset-0 bg-black/30" />
+        {/* Subtle vignette */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_40%,rgba(0,0,0,0.3)_100%)]" />
       </div>
 
       {/* Content */}
@@ -89,7 +91,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, description, imageSrc }) =
             animate={isInView ? "visible" : "hidden"}
             className="text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] font-serif font-medium tracking-tight text-white uppercase px-2"
             style={{ 
-              textShadow: '0 4px 20px rgba(0,0,0,0.2)',
+              textShadow: '0 10px 40px rgba(0,0,0,0.5)',
               lineHeight: 0.9
             }}
           >
@@ -100,9 +102,9 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, description, imageSrc }) =
             variants={subtitleVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="text-lg sm:text-xl md:text-2xl font-medium text-white/95 tracking-[0.1em] uppercase"
+            className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-[0.1em] uppercase"
             style={{ 
-              textShadow: '0 2px 10px rgba(0,0,0,0.2)'
+              textShadow: '0 4px 15px rgba(0,0,0,0.6)'
             }}
           >
             {subtitle}
@@ -114,9 +116,9 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, description, imageSrc }) =
             variants={descriptionVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed font-light"
+            className="text-base sm:text-lg md:text-xl text-white max-w-2xl mx-auto leading-relaxed font-bold"
             style={{ 
-              textShadow: '0 2px 10px rgba(0,0,0,0.2)'
+              textShadow: '0 4px 15px rgba(0,0,0,0.6)'
             }}
           >
             {description}

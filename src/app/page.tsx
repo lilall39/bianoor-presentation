@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import { Card, CardGrid } from '@/components/CardGrid';
@@ -78,26 +79,65 @@ export default function Home() {
         className="pt-10 md:pt-16"
       >
         <TwoColumns>
-          <div className="space-y-6 text-justify">
-            <p className="text-xl text-gray-600 leading-relaxed">
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            variants={{
+              visible: { transition: { staggerChildren: 0.1 } },
+              hidden: {}
+            }}
+            className="space-y-6 text-justify"
+          >
+            <motion.p 
+              variants={{
+                hidden: { opacity: 0, y: 12 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+              }}
+              className="text-xl text-gray-600 leading-relaxed"
+            >
               Le marché bio + halal + traçabilité manque de marques fortes et lisibles.
-            </p>
+            </motion.p>
             <ul className="space-y-4">
-              <li className="flex gap-4">
+              <motion.li 
+                variants={{
+                  hidden: { opacity: 0, y: 12 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                }}
+                className="flex gap-4"
+              >
                 <AlertTriangle className="text-accent shrink-0" />
                 <span><strong>Origine floue :</strong> Difficulté à tracer la provenance réelle des produits.</span>
-              </li>
-              <li className="flex gap-4">
+              </motion.li>
+              <motion.li 
+                variants={{
+                  hidden: { opacity: 0, y: 12 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                }}
+                className="flex gap-4"
+              >
                 <AlertTriangle className="text-accent shrink-0" />
                 <span><strong>Traçabilité limitée :</strong> Manque de transparence sur la chaîne de production.</span>
-              </li>
-              <li className="flex gap-4">
+              </motion.li>
+              <motion.li 
+                variants={{
+                  hidden: { opacity: 0, y: 12 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                }}
+                className="flex gap-4"
+              >
                 <AlertTriangle className="text-accent shrink-0" />
                 <span><strong>Qualité variable :</strong> Constance de qualité souvent aléatoire.</span>
-              </li>
+              </motion.li>
             </ul>
-          </div>
-          <div className="shadow-xl rounded-2xl border border-black/5 overflow-hidden">
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.96 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="shadow-xl rounded-2xl border border-black/5 overflow-hidden"
+          >
             <div className="relative aspect-[4/3]">
               <img 
                 src="/images/probleme-marche-dattes.png" 
@@ -105,7 +145,7 @@ export default function Home() {
                 className="w-full h-full object-cover"
               />
             </div>
-          </div>
+          </motion.div>
         </TwoColumns>
       </Section>
 
