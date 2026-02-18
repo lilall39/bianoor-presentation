@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, Variants } from 'framer-motion';
 
 interface HeroProps {
   title: string;
@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, imageSrc }) => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { amount: 0.3, margin: "0px" });
 
-  const titleVariants = {
+  const titleVariants: Variants = {
     hidden: { 
       opacity: 0, 
       scale: 0.95, 
@@ -36,7 +36,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, imageSrc }) => {
     }
   };
 
-  const subtitleVariants = {
+  const subtitleVariants: Variants = {
     hidden: { 
       opacity: 0, 
       y: 10 
