@@ -451,7 +451,7 @@ export default function Home() {
       <Section 
         title={t('risks_title')}
         animated={true}
-        className="mt-10 md:mt-16 text-center !pt-2 sm:!pt-8"
+        className="mt-6 md:mt-16 text-center !pt-0 sm:!pt-8"
       >
         <RisksCarousel />
       </Section>
@@ -460,7 +460,7 @@ export default function Home() {
       <Section 
         subtitle={t('phase1_subtitle')}
         title={t('phase1_title')}
-        className="mt-10 md:mt-16 !pt-2 sm:!pt-8"
+        className="mt-6 md:mt-16 !pt-0 sm:!pt-8"
       >
         <TwoColumns>
           <div className="space-y-6 text-justify">
