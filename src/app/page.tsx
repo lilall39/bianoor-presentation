@@ -566,7 +566,7 @@ export default function Home() {
       <Section 
         subtitle={t('assets_subtitle')}
         title={t('assets_title')}
-        className="pt-10 md:pt-16 mt-10 md:mt-16"
+        className="pt-6 md:pt-16 mt-6 md:mt-16 !pt-0 sm:!pt-8"
         animated={true}
       >
         <CardGrid columns={4}>
