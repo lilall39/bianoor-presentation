@@ -67,7 +67,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, description, imageSrc }) =
   return (
     <header 
       ref={containerRef}
-      className="relative w-full min-h-[500px] md:h-[58vh] flex flex-col items-center justify-start pt-[8vh] md:pt-[10vh] px-4 overflow-hidden"
+      className="relative w-full min-h-[350px] md:h-[58vh] flex flex-col items-center justify-start pt-[8vh] md:pt-[10vh] px-4 overflow-hidden"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
