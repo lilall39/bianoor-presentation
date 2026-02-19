@@ -71,7 +71,7 @@ function TargetCarousel() {
           {slides.map((slide, i) => (
             <div key={i} className="w-full flex-shrink-0 p-6 md:p-8 flex flex-col items-center justify-center text-center space-y-4">
               <h3 className="text-xl md:text-3xl font-bold text-[#2D1E14]">{slide.title}</h3>
-              <p className="text-base md:text-xl text-[#2D1E14]/80 leading-relaxed max-w-[90%] mx-auto">
+              <p className="text-base md:text-xl text-[#2D1E14]/80 leading-relaxed max-w-[90%] mx-auto font-bold">
                 {slide.text}
               </p>
             </div>
@@ -164,7 +164,7 @@ function SolutionCarousel() {
               className="w-full flex-shrink-0 p-6 md:p-8 flex flex-col items-center justify-center text-center space-y-4"
             >
               <h3 className="text-xl md:text-3xl font-bold text-[#2D1E14]">{slide.title}</h3>
-              <p className="text-base md:text-xl text-[#2D1E14] leading-relaxed max-w-[90%] mx-auto">
+              <p className="text-base md:text-xl text-[#2D1E14] leading-relaxed max-w-[90%] mx-auto font-bold">
                 {slide.text}
               </p>
             </div>
@@ -273,7 +273,7 @@ function RisksCarousel() {
               
               <div className="relative z-10">
                 <h3 className="text-xl md:text-2xl font-serif font-bold text-[#2D1E14]">{slide.title}</h3>
-                <p className="text-sm md:text-lg text-[#2D1E14]/80 leading-relaxed max-w-[85%] mx-auto">
+                <p className="text-sm md:text-lg text-[#2D1E14]/80 leading-relaxed max-w-[85%] mx-auto font-bold">
                   {slide.text}
                 </p>
               </div>
