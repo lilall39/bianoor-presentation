@@ -460,7 +460,7 @@ export default function Home() {
       <Section 
         subtitle={t('phase1_subtitle')}
         title={t('phase1_title')}
-        className="mt-10 md:mt-16"
+        className="mt-10 md:mt-16 !pt-2 sm:!pt-8"
       >
         <TwoColumns>
           <div className="space-y-6 text-justify">
