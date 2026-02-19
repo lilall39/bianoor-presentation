@@ -272,7 +272,7 @@ function RisksCarousel() {
               </div>
               
               <div className="relative z-10">
-                <h3 className="text-xl md:text-2xl font-serif font-bold text-[#2D1E14]">{slide.title}</h3>
+                <h3 className="text-xl md:text-2xl font-serif font-bold text-[#2D1E14] relative -top-6">{slide.title}</h3>
                 <p className="text-sm md:text-lg text-[#2D1E14]/80 leading-relaxed max-w-[85%] mx-auto font-bold">
                   {slide.text}
                 </p>
