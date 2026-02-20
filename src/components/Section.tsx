@@ -5,8 +5,8 @@ import { motion, Variants } from 'framer-motion';
 
 interface SectionProps {
   children: React.ReactNode;
-  title?: string;
-  subtitle?: string;
+  title?: React.ReactNode;
+  subtitle?: React.ReactNode;
   className?: string;
   dark?: boolean;
   animated?: boolean;

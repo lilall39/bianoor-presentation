@@ -458,7 +458,12 @@ export default function Home() {
 
       {/* 6. Produit phase 1 — Dattes */}
       <Section 
-        subtitle={t('phase1_subtitle')}
+        subtitle={
+          <span>
+            {t('phase1_subtitle').split(' ')[0]} 
+            <span className="md:hidden"> {t('phase1_subtitle').split(' ')[1]}</span>
+          </span>
+        }
         title={t('phase1_title')}
         className="mt-6 md:mt-16 !pt-0 sm:!pt-8"
       >
