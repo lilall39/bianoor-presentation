@@ -451,7 +451,7 @@ export default function Home() {
       <Section 
         title={t('risks_title')}
         animated={true}
-        className="mt-2 md:mt-16 text-center !pt-0 sm:!pt-8"
+        className="mt-2 md:mt-8 text-center !pt-0 sm:!pt-8"
       >
         <RisksCarousel />
       </Section>
