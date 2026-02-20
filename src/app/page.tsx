@@ -500,7 +500,7 @@ export default function Home() {
 
       {/* 4. Cibles clients & usages */}
       <Section 
-        className="mt-6 md:mt-16 !pt-0 sm:!pt-8"
+        className="mt-6 md:mt-8 !pt-0 sm:!pt-8"
         animated={true}
       >
         <CardGrid columns={2} className="items-start">
