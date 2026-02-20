@@ -416,7 +416,7 @@ export default function Home() {
             }}
             title={t('opp_card1_title')}
             description={t('opp_card1_desc')}
-            className="bg-[#F0E6DD]/40 !border-2 !border-[#2D1E14]/30 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-[#1F1F1F] [&_div]:text-[17px] [&_h3]:!text-[#2D1E14] [&_h3]:text-[18px] min-[1100px]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tighter md:[&_h3]:whitespace-nowrap [&_h3]:!mt-0 [&_h3]:!mb-2 [&_div]:whitespace-pre-line [&_div]:text-justify md:col-span-1 h-full shadow-sm"
+            className="bg-[#F0E6DD]/40 !border-2 !border-[#2D1E14]/30 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-accent [&_div]:text-[17px] [&_h3]:!text-[#2D1E14] [&_h3]:text-[18px] min-[1100px]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tighter md:[&_h3]:whitespace-nowrap [&_h3]:!mt-0 [&_h3]:!mb-2 [&_div]:whitespace-pre-line [&_div]:text-justify md:col-span-1 h-full shadow-sm [&_strong]:!text-[#1F1F1F]"
           />
           <Card 
             variants={{
