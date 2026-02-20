@@ -332,7 +332,7 @@ export default function Home() {
       <Section 
         subtitle={t('problem_subtitle')}
         title={t('problem_title')}
-        className="pt-10 md:pt-16"
+        className="mt-4 md:mt-8"
         animated={true}
         viewportAmount={0.01}
         viewportMargin="-10% 0px -43% 0px"
@@ -407,6 +407,7 @@ export default function Home() {
         title={t('opportunity_title')}
         dark
         animated={true}
+        className="mt-4 md:mt-8 !py-8"
       >
         <CardGrid columns={2} className="items-stretch">
           <Card 
@@ -433,7 +434,7 @@ export default function Home() {
       <Section 
         title={t('competition_title')}
         animated={true}
-        className="mt-12 !py-4 text-center"
+        className="mt-4 md:mt-8 !py-4 text-center"
       >
         <div className="max-w-4xl mx-auto text-center">
           <motion.p 
@@ -451,7 +452,7 @@ export default function Home() {
       <Section 
         title={t('risks_title')}
         animated={true}
-        className="mt-2 md:mt-8 text-center !pt-0 sm:!pt-8"
+        className="mt-4 md:mt-8 text-center !py-4"
       >
         <RisksCarousel />
       </Section>
@@ -459,7 +460,7 @@ export default function Home() {
       {/* 6. Produit phase 1 — Dattes */}
       <Section 
         title={t('phase1_title')}
-        className="mt-0 md:mt-4 !pt-0 sm:!pt-0"
+        className="mt-4 md:mt-8 !py-4"
       >
         <TwoColumns>
           <div className="space-y-6 text-justify">
@@ -494,7 +495,7 @@ export default function Home() {
 
       {/* 4. Cibles clients & usages */}
       <Section 
-        className="mt-6 md:mt-8 !pt-0 sm:!pt-8"
+        className="mt-4 md:mt-8 !py-4"
         animated={true}
       >
         <CardGrid columns={2} className="items-start">
@@ -550,7 +551,7 @@ export default function Home() {
       {/* 7. Avantage clé — humain & filières */}
       <Section 
         dark
-        className="mt-10 md:mt-16 min-h-[40vh] md:h-[58vh] flex items-center justify-center overflow-hidden p-4 sm:p-8 md:p-12"
+        className="mt-4 md:mt-8 min-h-[40vh] md:h-[58vh] flex items-center justify-center overflow-hidden p-4 sm:p-8 md:p-12"
       >
         <div className="w-full h-full flex items-center justify-center max-w-5xl mx-auto">
           <img 
@@ -565,7 +566,7 @@ export default function Home() {
       <Section 
         subtitle={t('assets_subtitle')}
         title={t('assets_title')}
-        className="pt-6 md:pt-16 mt-6 md:mt-16 !pt-0 sm:!pt-8"
+        className="mt-4 md:mt-8 !py-4"
         animated={true}
       >
         <CardGrid columns={4}>
@@ -613,7 +614,7 @@ export default function Home() {
       <Section 
         subtitle={t('bm_subtitle')}
         title={t('bm_title')}
-        className="mt-10 md:mt-16"
+        className="mt-4 md:mt-8 !py-4"
       >
         <TwoColumns>
           <div className="space-y-6 text-gray-600">
@@ -642,6 +643,7 @@ export default function Home() {
       <Section 
         subtitle={t('roadmap_subtitle')}
         title={t('roadmap_title')}
+        className="mt-4 md:mt-8 !py-4"
       >
         <div className="relative border-l-2 border-accent/20 ml-4 space-y-12 pb-8">
           <div className="relative pl-8 md:pl-12">
@@ -667,6 +669,7 @@ export default function Home() {
       <Section 
         subtitle={t('finance_subtitle')}
         title={t('finance_title')}
+        className="mt-4 md:mt-8 !py-4"
       >
         <h4 className="text-lg md:text-xl font-bold mb-8">{t('finance_usage')}</h4>
         <CardGrid columns={3}>
@@ -706,6 +709,7 @@ export default function Home() {
       <Section 
         subtitle={t('risk_mitigation_subtitle')}
         title={t('risk_mitigation_title')}
+        className="mt-4 md:mt-8 !py-4"
       >
         <CardGrid columns={2}>
           <Card 
@@ -725,6 +729,7 @@ export default function Home() {
       <Section 
         subtitle={t('team_subtitle')}
         title={t('team_title')}
+        className="mt-4 md:mt-8 !py-4"
       >
         <TwoColumns align="top">
           <div className="space-y-4">
@@ -740,7 +745,7 @@ export default function Home() {
       </Section>
 
       {/* 14. Conclusion / Pourquoi investir */}
-      <Section>
+      <Section className="mt-4 md:mt-8 !py-4">
         <CTA 
           title={t('cta_title')}
           description={t('cta_desc')}
