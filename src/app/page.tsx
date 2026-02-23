@@ -81,15 +81,17 @@ function TargetCarousel() {
 
       <button 
         onClick={prev}
-        className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 border border-black/5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity hidden md:block text-accent hover:bg-white z-10"
+        className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/90 border border-black/10 shadow-md text-accent hover:bg-white z-30 transition-all active:scale-95 flex items-center justify-center"
+        aria-label="Previous slide"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={24} strokeWidth={3} />
       </button>
       <button 
         onClick={next}
-        className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 border border-black/5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity hidden md:block text-accent hover:bg-white z-10"
+        className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/90 border border-black/10 shadow-md text-accent hover:bg-white z-30 transition-all active:scale-95 flex items-center justify-center"
+        aria-label="Next slide"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={24} strokeWidth={3} />
       </button>
 
       <div className="flex justify-center gap-2 mt-6">
@@ -174,15 +176,17 @@ function SolutionCarousel() {
 
       <button 
         onClick={prev}
-        className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 border border-black/5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity hidden md:block text-accent hover:bg-white z-10"
+        className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/90 border border-black/10 shadow-md text-accent hover:bg-white z-30 transition-all active:scale-95 flex items-center justify-center"
+        aria-label="Previous slide"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={24} strokeWidth={3} />
       </button>
       <button 
         onClick={next}
-        className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 border border-black/5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity hidden md:block text-accent hover:bg-white z-10"
+        className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/90 border border-black/10 shadow-md text-accent hover:bg-white z-30 transition-all active:scale-95 flex items-center justify-center"
+        aria-label="Next slide"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={24} strokeWidth={3} />
       </button>
 
       <div className="flex justify-center gap-2 mt-6">
@@ -246,7 +250,7 @@ function ComparisonCarousel() {
 
   const startAutoplay = () => {
     stopAutoplay();
-    timerRef.current = setInterval(next, 4000);
+    timerRef.current = setInterval(next, 4500);
   };
 
   const stopAutoplay = () => {
@@ -327,15 +331,17 @@ function ComparisonCarousel() {
 
       <button 
         onClick={prev}
-        className="absolute left-1 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-white/80 border border-black/5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity hidden md:block text-accent hover:bg-white z-10"
+        className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/90 border border-black/10 shadow-md text-accent hover:bg-white z-30 transition-all active:scale-95 flex items-center justify-center"
+        aria-label="Previous slide"
       >
-        <ChevronLeft size={16} />
+        <ChevronLeft size={24} strokeWidth={3} />
       </button>
       <button 
         onClick={next}
-        className="absolute right-1 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-white/80 border border-black/5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity hidden md:block text-accent hover:bg-white z-10"
+        className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/90 border border-black/10 shadow-md text-accent hover:bg-white z-30 transition-all active:scale-95 flex items-center justify-center"
+        aria-label="Next slide"
       >
-        <ChevronRight size={16} />
+        <ChevronRight size={24} strokeWidth={3} />
       </button>
 
       <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-1.5 z-10">
@@ -389,7 +395,7 @@ function RisksCarousel() {
 
   const startAutoplay = () => {
     stopAutoplay();
-    timerRef.current = setInterval(next, 2500);
+    timerRef.current = setInterval(next, 3000);
   };
 
   const stopAutoplay = () => {
@@ -469,15 +475,17 @@ function RisksCarousel() {
 
       <button 
         onClick={prev}
-        className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 border border-black/5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity hidden md:block text-accent hover:bg-white z-10"
+        className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/90 border border-black/10 shadow-md text-accent hover:bg-white z-30 transition-all active:scale-95 flex items-center justify-center"
+        aria-label="Previous slide"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={24} strokeWidth={3} />
       </button>
       <button 
         onClick={next}
-        className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 border border-black/5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity hidden md:block text-accent hover:bg-white z-10"
+        className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/90 border border-black/10 shadow-md text-accent hover:bg-white z-30 transition-all active:scale-95 flex items-center justify-center"
+        aria-label="Next slide"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={24} strokeWidth={3} />
       </button>
 
       <div className="flex justify-center gap-2 mt-4">
