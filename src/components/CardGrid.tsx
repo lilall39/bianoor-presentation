@@ -21,11 +21,11 @@ export const Card: React.FC<CardProps> = ({ title, description, icon, className 
       <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">{title}</h3>
       {typeof description === 'string' ? (
         <div 
-          className="text-sm sm:text-base text-[#1A1A1A] leading-relaxed font-bold px-2 md:px-0 max-w-[94%] md:max-w-none mx-auto md:mx-0"
+          className="text-sm sm:text-base text-[#1A1A1A] leading-relaxed font-bold"
           dangerouslySetInnerHTML={{ __html: description }}
         />
       ) : (
-        <div className="text-sm sm:text-base text-[#1A1A1A] leading-relaxed font-bold px-2 md:px-0 max-w-[94%] md:max-w-none mx-auto md:mx-0">
+        <div className="text-sm sm:text-base text-[#1A1A1A] leading-relaxed font-bold">
           {description}
         </div>
       )}

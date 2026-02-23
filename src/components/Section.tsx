@@ -33,7 +33,7 @@ const Section: React.FC<SectionProps> = ({
         visible: { transition: { staggerChildren: 0.2 } },
         hidden: {}
       } : undefined}
-      className={`py-6 sm:py-8 px-4 sm:px-6 md:px-12 lg:px-24 ${dark ? 'bg-accent text-white' : 'bg-background text-foreground'} ${className}`}
+      className={`py-6 sm:py-8 px-2 sm:px-6 md:px-12 lg:px-24 ${dark ? 'bg-accent text-white' : 'bg-background text-foreground'} ${className}`}
     >
       <div className="max-w-6xl mx-auto">
         {(title || subtitle) && (
@@ -67,7 +67,6 @@ const Section: React.FC<SectionProps> = ({
             visible: { transition: { staggerChildren: 0.16 } },
             hidden: {}
           } : undefined}
-          className="px-2 md:px-0 max-w-[92%] md:max-w-none mx-auto md:mx-0"
         >
           {children}
         </motion.div>

@@ -526,12 +526,7 @@ export default function Home() {
           <motion.div 
             className="space-y-6 text-justify"
           >
-            <motion.p 
-              variants={{
-                hidden: { opacity: 0, y: 24 },
-                visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
-              }}
-              className="text-lg md:text-xl text-gray-600 leading-relaxed px-2 md:px-0 max-w-[92%] md:max-w-none mx-auto md:mx-0"
+            className="text-lg md:text-xl text-gray-600 leading-relaxed"
             >
               {t('problem_intro')}
             </motion.p>
@@ -602,7 +597,7 @@ export default function Home() {
             }}
             title={t('opp_card1_title')}
             description={t('opp_card1_desc')}
-            className="bg-[#F0E6DD]/40 !border-2 !border-[#2D1E14]/30 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-accent [&_div]:text-[17px] [&_h3]:!text-[#2D1E14] [&_h3]:text-[18px] min-[1100px]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tighter md:[&_h3]:whitespace-nowrap [&_h3]:!mt-0 [&_h3]:!mb-2 [&_div]:whitespace-pre-line [&_div]:text-justify md:col-span-1 h-full shadow-sm [&_strong]:!text-[#1F1F1F]"
+            className="bg-[#F0E6DD]/40 !border-2 !border-[#2D1E14]/30 !pt-2 !pb-4 px-2 md:!px-5 flex flex-col items-start justify-start [&_div]:!text-accent [&_div]:text-[14px] md:[&_div]:text-[17px] [&_div]:leading-snug [&_h3]:!text-[#2D1E14] [&_h3]:text-[18px] min-[1100px]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tighter md:[&_h3]:whitespace-nowrap [&_h3]:!mt-0 [&_h3]:!mb-2 [&_div]:whitespace-pre-line [&_div]:text-justify md:col-span-1 h-full shadow-sm [&_strong]:!text-[#1F1F1F]"
           />
           <Card 
             variants={{
@@ -611,7 +606,7 @@ export default function Home() {
             }}
             title={t('opp_card2_title')}
             description={t('opp_card2_desc')}
-            className="bg-[#F0E6DD]/40 !border-2 !border-[#2D1E14]/30 !pt-2 !pb-4 !px-5 flex flex-col items-start justify-start [&_div]:!text-accent [&_div]:text-[17px] [&_h3]:!text-[#2D1E14] [&_h3]:text-[18px] min-[1100px]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tighter md:[&_h3]:whitespace-nowrap [&_h3]:!mt-0 [&_h3]:!mb-2 [&_div]:whitespace-pre-line [&_div]:text-justify md:col-span-1 h-full shadow-sm [&_strong]:!text-[#1F1F1F]"
+            className="bg-[#F0E6DD]/40 !border-2 !border-[#2D1E14]/30 !pt-2 !pb-4 px-2 md:!px-5 flex flex-col items-start justify-start [&_div]:!text-accent [&_div]:text-[14px] md:[&_div]:text-[17px] [&_div]:leading-snug [&_h3]:!text-[#2D1E14] [&_h3]:text-[18px] min-[1100px]:text-[22px] [&_h3]:font-serif [&_h3]:font-bold [&_h3]:tracking-tighter md:[&_h3]:whitespace-nowrap [&_h3]:!mt-0 [&_h3]:!mb-2 [&_div]:whitespace-pre-line [&_div]:text-justify md:col-span-1 h-full shadow-sm [&_strong]:!text-[#1F1F1F]"
           />
         </CardGrid>
       </Section>
@@ -627,7 +622,7 @@ export default function Home() {
               hidden: { opacity: 0, y: 24 },
               visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
             }}
-            className="text-lg md:text-xl text-gray-600 leading-relaxed px-2 md:px-0 max-w-[92%] md:max-w-none mx-auto md:mx-0"
+            className="text-lg md:text-xl text-gray-600 leading-relaxed"
           >
             {t('competition_text')}
           </motion.p>
@@ -652,7 +647,7 @@ export default function Home() {
             <div className="p-4 bg-[#F0E6DD] border-l-4 border-accent inline-block">
               <span className="font-bold text-accent text-sm md:text-base">{t('phase1_quality')}</span>
             </div>
-            <p className="text-sm md:text-base text-gray-600 leading-relaxed px-2 md:px-0 max-w-[92%] md:max-w-none mx-auto md:mx-0">
+            <p className="text-sm md:text-base text-gray-600 leading-relaxed">
               {t('phase1_desc')}
             </p>
             <CardGrid columns={1} className="!gap-4 text-left">
