@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, Variants } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
@@ -198,9 +198,165 @@ function SolutionCarousel() {
   );
 }
 
+function ComparisonCarousel() {
+  const [current, setCurrent] = useState(0);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const resumeTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const slides = [
+    {
+      title: "Medium Sweetness",
+      subtitle: "Dattes à douceur moyenne",
+      headers: ["Datte", "Origine", "Douceur", "Texture", "Positionnement"],
+      rows: [
+        ["Deglet Nour", "Algérie", "Douceur moyenne (n°1 TasteAtlas)", "Semi-sèche / fondante", "Équilibrée, premium"],
+        ["Piarom", "Iran", "Douceur moyenne", "Semi-sèche", "Premium aromatique"],
+        ["Ajwa", "Arabie Saoudite", "Douceur moyenne", "Moelleuse", "Datte noble"],
+        ["Mabroom", "Arabie Saoudite", "Douceur moyenne", "Semi-sèche", "Élégante"],
+        ["Khudri", "Arabie Saoudite", "Douceur moyenne", "Semi-sèche", "Régulière"]
+      ]
+    },
+    {
+      title: "Intense Sweetness",
+      subtitle: "Dattes très sucrées",
+      headers: ["Datte", "Origine", "Douceur", "Texture", "Positionnement"],
+      rows: [
+        ["Medjool", "Maroc / Palestine", "Très sucrée", "Très moelleuse", "Gourmande"],
+        ["Sukari", "Arabie Saoudite", "Très sucrée", "Très moelleuse", "Caramel"],
+        ["Mazafati", "Iran", "Très sucrée", "Ultra moelleuse", "Fondante"],
+        ["Barhi", "Irak", "Très sucrée", "Moelleuse", "Douce"],
+        ["Halawy", "Irak", "Très sucrée", "Moelleuse", "Saveur miel"]
+      ]
+    },
+    {
+      title: "Mild Sweetness",
+      subtitle: "Dattes peu sucrées",
+      headers: ["Datte", "Origine", "Douceur", "Texture", "Positionnement"],
+      rows: [
+        ["Thoory", "Algérie", "Peu sucrée", "Sèche", "Cuisine"],
+        ["Zahdi", "Irak", "Peu sucrée", "Sèche", "Conservation"],
+        ["Sayer", "Iran / Irak", "Peu sucrée", "Sèche", "Table"],
+        ["Kholas", "Arabie Saoudite", "Peu sucrée", "Semi-sèche", "Légère"],
+        ["Dabbas", "Émirats Arabes Unis", "Peu sucrée", "Moelleuse", "Douce légère"]
+      ]
+    }
+  ];
+
+  const next = () => setCurrent((prev) => (prev + 1) % slides.length);
+  const prev = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+
+  const startAutoplay = () => {
+    stopAutoplay();
+    timerRef.current = setInterval(next, 4000);
+  };
+
+  const stopAutoplay = () => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+  };
+
+  const handleInteraction = () => {
+    stopAutoplay();
+  };
+
+  const handleResume = () => {
+    stopAutoplay();
+    resumeTimerRef.current = setTimeout(() => {
+      startAutoplay();
+    }, 4000);
+  };
+
+  useEffect(() => {
+    startAutoplay();
+    return () => stopAutoplay();
+  }, []);
+
+  return (
+    <div 
+      className="relative group w-full h-full"
+      onMouseEnter={handleInteraction}
+      onMouseLeave={handleResume}
+      onTouchStart={handleInteraction}
+      onTouchEnd={handleResume}
+      style={{
+        background: 'linear-gradient(to bottom right, #F0E6DD, #E2D1C3) padding-box, linear-gradient(to bottom right, #9B6B4A, #4A3224) border-box',
+        border: '2px solid transparent'
+      }}
+    >
+      <div className="overflow-hidden h-full flex items-center relative touch-pan-y">
+        <motion.div 
+          className="flex w-full h-full"
+          animate={{ x: `-${current * 100}%` }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          onDragEnd={(_, info) => {
+            if (info.offset.x < -30) next();
+            if (info.offset.x > 30) prev();
+          }}
+        >
+          {slides.map((slide, i) => (
+            <div key={i} className="w-full h-full flex-shrink-0 p-4 md:p-6 flex flex-col">
+              <div className="mb-4 text-center">
+                <h3 className="text-lg font-bold text-accent">{slide.title}</h3>
+                <p className="text-xs text-gray-500 italic">{slide.subtitle}</p>
+              </div>
+              <div className="flex-1 overflow-x-auto">
+                <table className="w-full text-[10px] md:text-xs text-left border-collapse">
+                  <thead>
+                    <tr className="border-b border-accent/20">
+                      {slide.headers.map((h, j) => (
+                        <th key={j} className="py-2 px-1 font-bold text-accent whitespace-nowrap">{h}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {slide.rows.map((row, j) => (
+                      <tr key={j} className="border-b border-accent/10 last:border-0 hover:bg-accent/5 transition-colors">
+                        {row.map((cell, k) => (
+                          <td key={k} className={`py-2 px-1 ${row[0] === 'Deglet Nour' ? 'text-black font-bold' : 'text-gray-700'}`}>{cell}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+
+      <button 
+        onClick={prev}
+        className="absolute left-1 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-white/80 border border-black/5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity hidden md:block text-accent hover:bg-white z-10"
+      >
+        <ChevronLeft size={16} />
+      </button>
+      <button 
+        onClick={next}
+        className="absolute right-1 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-white/80 border border-black/5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity hidden md:block text-accent hover:bg-white z-10"
+      >
+        <ChevronRight size={16} />
+      </button>
+
+      <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-1.5 z-10">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-1.5 h-1.5 rounded-full transition-all ${current === i ? 'bg-accent w-4' : 'bg-accent/20'}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function RisksCarousel() {
   const { t } = useLanguage();
   const [current, setCurrent] = useState(0);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const resumeTimerRef = useRef<NodeJS.Timeout | null>(null);
+
   const slides = [
     {
       title: t('risk1_title'),
@@ -231,15 +387,44 @@ function RisksCarousel() {
   const next = () => setCurrent((prev) => (prev + 1) % slides.length);
   const prev = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
+  const startAutoplay = () => {
+    stopAutoplay();
+    timerRef.current = setInterval(next, 2500);
+  };
+
+  const stopAutoplay = () => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+  };
+
+  const handleInteraction = () => {
+    stopAutoplay();
+  };
+
+  const handleResume = () => {
+    stopAutoplay();
+    resumeTimerRef.current = setTimeout(() => {
+      startAutoplay();
+    }, 4000);
+  };
+
+  useEffect(() => {
+    startAutoplay();
+    return () => stopAutoplay();
+  }, []);
+
   const carouselVariants: Variants = {
     hidden: { opacity: 0, y: 24 },
     visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
   };
 
   return (
-    <motion.div 
-      variants={carouselVariants}
+    <div 
       className="relative group w-full"
+      onMouseEnter={handleInteraction}
+      onMouseLeave={handleResume}
+      onTouchStart={handleInteraction}
+      onTouchEnd={handleResume}
     >
       <div 
         className="overflow-hidden rounded-2xl shadow-lg min-h-[200px] md:min-h-[220px] flex items-center relative touch-pan-y"
@@ -304,7 +489,7 @@ function RisksCarousel() {
           />
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -483,11 +668,7 @@ export default function Home() {
           </div>
           <div className="shadow-xl rounded-2xl border border-black/5 overflow-hidden">
             <div className="relative aspect-[4/3]">
-              <img 
-                src="/images/packshot-dattes-v2.png" 
-                alt="Packshot Dattes BIONOOR" 
-                className="w-full h-full object-cover"
-              />
+              <ComparisonCarousel />
             </div>
           </div>
         </TwoColumns>
