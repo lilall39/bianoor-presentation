@@ -526,7 +526,12 @@ export default function Home() {
           <motion.div 
             className="space-y-6 text-justify"
           >
-            className="text-lg md:text-xl text-gray-600 leading-relaxed"
+            <motion.p 
+              variants={{
+                hidden: { opacity: 0, y: 24 },
+                visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+              }}
+              className="text-lg md:text-xl text-gray-600 leading-relaxed"
             >
               {t('problem_intro')}
             </motion.p>
