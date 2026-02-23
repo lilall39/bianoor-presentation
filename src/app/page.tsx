@@ -531,7 +531,7 @@ export default function Home() {
                 hidden: { opacity: 0, y: 24 },
                 visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
               }}
-              className="text-lg md:text-xl text-gray-600 leading-relaxed"
+              className="text-lg md:text-xl text-gray-600 leading-relaxed px-2 md:px-0 max-w-[92%] md:max-w-none mx-auto md:mx-0"
             >
               {t('problem_intro')}
             </motion.p>
@@ -627,7 +627,7 @@ export default function Home() {
               hidden: { opacity: 0, y: 24 },
               visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
             }}
-            className="text-lg md:text-xl text-gray-600 leading-relaxed"
+            className="text-lg md:text-xl text-gray-600 leading-relaxed px-2 md:px-0 max-w-[92%] md:max-w-none mx-auto md:mx-0"
           >
             {t('competition_text')}
           </motion.p>
@@ -652,7 +652,7 @@ export default function Home() {
             <div className="p-4 bg-[#F0E6DD] border-l-4 border-accent inline-block">
               <span className="font-bold text-accent text-sm md:text-base">{t('phase1_quality')}</span>
             </div>
-            <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+            <p className="text-sm md:text-base text-gray-600 leading-relaxed px-2 md:px-0 max-w-[92%] md:max-w-none mx-auto md:mx-0">
               {t('phase1_desc')}
             </p>
             <CardGrid columns={1} className="!gap-4 text-left">

@@ -15,7 +15,7 @@ const CTA: React.FC<CTAProps> = ({ title, description, buttonText, link = "#", c
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
           {title}
         </h2>
-        <p className="text-base sm:text-lg text-orange-100 opacity-90 leading-relaxed">
+        <p className="text-base sm:text-lg text-orange-100 opacity-90 leading-relaxed px-4 md:px-0 max-w-[92%] md:max-w-none mx-auto md:mx-0">
           {description}
         </p>
       </div>

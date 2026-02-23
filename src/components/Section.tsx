@@ -67,6 +67,7 @@ const Section: React.FC<SectionProps> = ({
             visible: { transition: { staggerChildren: 0.16 } },
             hidden: {}
           } : undefined}
+          className="px-2 md:px-0 max-w-[92%] md:max-w-none mx-auto md:mx-0"
         >
           {children}
         </motion.div>
