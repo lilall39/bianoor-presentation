@@ -30,7 +30,7 @@ const Section: React.FC<SectionProps> = ({
       whileInView={animated ? "visible" : undefined}
       viewport={animated ? { once: false, amount: viewportAmount, margin: viewportMargin } : undefined}
       variants={animated ? {
-        visible: { transition: { staggerChildren: 0.2 } },
+        visible: { transition: { staggerChildren: 0.12 } },
         hidden: {}
       } : undefined}
       className={`py-6 sm:py-8 px-2 sm:px-6 md:px-12 lg:px-24 ${dark ? 'bg-accent text-white' : 'bg-background text-foreground'} ${className}`}
@@ -42,7 +42,7 @@ const Section: React.FC<SectionProps> = ({
               <motion.p 
                 variants={animated ? {
                   hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
                 } : undefined}
                 className={`text-base font-bold uppercase tracking-widest mb-3 md:mb-4 ${dark ? 'text-orange-200' : 'text-accent'}`}
               >
@@ -53,7 +53,7 @@ const Section: React.FC<SectionProps> = ({
               <motion.h2 
                 variants={animated ? {
                   hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
                 } : undefined}
                 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 leading-tight font-serif font-medium tracking-tight"
               >
@@ -64,7 +64,7 @@ const Section: React.FC<SectionProps> = ({
         )}
         <motion.div
           variants={animated ? {
-            visible: { transition: { staggerChildren: 0.16 } },
+            visible: { transition: { staggerChildren: 0.12 } },
             hidden: {}
           } : undefined}
         >

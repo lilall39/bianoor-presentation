@@ -42,7 +42,7 @@ function TargetCarousel() {
 
   const carouselVariants: Variants = {
     hidden: { opacity: 0, y: 24 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
   };
 
   return (
@@ -134,7 +134,7 @@ function SolutionCarousel() {
 
   const carouselVariants: Variants = {
     hidden: { opacity: 0, y: 24 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
   };
 
   return (
@@ -421,7 +421,7 @@ function RisksCarousel() {
 
   const carouselVariants: Variants = {
     hidden: { opacity: 0, y: 24 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
   };
 
   return (
@@ -537,7 +537,7 @@ export default function Home() {
             <motion.p 
               variants={{
                 hidden: { opacity: 0, y: 24 },
-                visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
               }}
               className="text-lg md:text-xl text-gray-600 leading-relaxed"
             >
@@ -547,7 +547,7 @@ export default function Home() {
               <motion.li 
                 variants={{
                   hidden: { opacity: 0, y: 24 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
                 }}
                 className="flex gap-4"
               >
@@ -557,7 +557,7 @@ export default function Home() {
               <motion.li 
                 variants={{
                   hidden: { opacity: 0, y: 24 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
                 }}
                 className="flex gap-4"
               >
@@ -567,7 +567,7 @@ export default function Home() {
               <motion.li 
                 variants={{
                   hidden: { opacity: 0, y: 24 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
                 }}
                 className="flex gap-4"
               >
@@ -579,7 +579,7 @@ export default function Home() {
           <motion.div 
             variants={{
               hidden: { opacity: 0, scale: 0.92 },
-              visible: { opacity: 1, scale: 1, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+              visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
             }}
             className="shadow-xl rounded-2xl border border-black/5 overflow-hidden"
           >
@@ -606,7 +606,7 @@ export default function Home() {
           <Card 
             variants={{
               hidden: { opacity: 0, y: 24 },
-              visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+              visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
             }}
             title={t('opp_card1_title')}
             description={t('opp_card1_desc')}
@@ -615,7 +615,7 @@ export default function Home() {
           <Card 
             variants={{
               hidden: { opacity: 0, y: 24 },
-              visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+              visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
             }}
             title={t('opp_card2_title')}
             description={t('opp_card2_desc')}
@@ -633,7 +633,7 @@ export default function Home() {
           <motion.p 
             variants={{
               hidden: { opacity: 0, y: 24 },
-              visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+              visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
             }}
             className="text-lg md:text-xl text-gray-600 leading-relaxed"
           >
@@ -693,7 +693,7 @@ export default function Home() {
               <motion.p 
                 variants={{
                   hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
                 }}
                 className="text-sm md:text-base font-bold uppercase tracking-widest mb-3 md:mb-4 text-accent"
               >
@@ -702,7 +702,7 @@ export default function Home() {
               <motion.h2 
                 variants={{
                   hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
                 }}
                 className="text-[12px] min-[375px]:text-[14px] min-[425px]:text-[16px] sm:text-2xl md:text-3xl lg:text-4xl mb-4 sm:mb-6 leading-tight font-serif font-medium tracking-tighter whitespace-nowrap"
               >
@@ -716,7 +716,7 @@ export default function Home() {
               <motion.p 
                 variants={{
                   hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
                 }}
                 className="text-sm md:text-base font-bold uppercase tracking-widest mb-3 md:mb-4 text-accent"
               >
@@ -725,7 +725,7 @@ export default function Home() {
               <motion.h2 
                 variants={{
                   hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
                 }}
                 className="text-[9px] min-[320px]:text-[10px] min-[375px]:text-[11px] min-[425px]:text-[13px] sm:text-2xl md:text-3xl lg:text-4xl mb-4 sm:mb-6 leading-tight font-serif font-medium tracking-[-0.07em] whitespace-nowrap"
               >
